@@ -35,5 +35,23 @@
       // Default section fade-in
       gsap.from('main section', { duration: 0.7, opacity: 0, delay: 1.5, ease: 'power1.out' });
     }
+
+    // Highlight current page in nav
+    const currentPath = window.location.pathname.split('/').pop();
+    document.querySelectorAll('nav a').forEach(link => {
+      if (link.getAttribute('href') === currentPath) {
+        link.classList.add('active');
+      }
+    });
+
+    // Add GSAP hover animations to nav items
+    document.querySelectorAll('nav li').forEach(item => {
+      item.addEventListener('mouseenter', () => {
+        gsap.to(item, { scale: 1.2, duration: 0.2, ease: 'power1.out' });
+      });
+      item.addEventListener('mouseleave', () => {
+        gsap.to(item, { scale: 1, duration: 0.2, ease: 'power1.out' });
+      });
+    });
   }
 })();
