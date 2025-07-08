@@ -1,0 +1,11 @@
+nav:
+  - title: Home
+    url: /
+  - title: Spawning
+    url: /spawning/
+  - title: Mechanics
+    url: /basic-mechanics/
+  - title: Nation Types
+    url: /nation-types/
+  - title: Migration
+    url: /migration/
