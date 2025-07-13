@@ -96,7 +96,6 @@ header::before {
       rgba(184, 134, 11, 0.1) 10px,
       rgba(184, 134, 11, 0.1) 20px
     );
-  opacity: 0.3;
 }
 
 header::after {
@@ -174,26 +173,29 @@ header h1::after {
 }
 
 @keyframes glow {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.7; transform: scale(1.1); }
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
 }
 
 /* Medieval Navigation - Separated Sticky Bar */
 nav {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px;
   z-index: 1000;
   background: linear-gradient(135deg, var(--ink-dark) 0%, var(--leather-brown) 50%, var(--ink-dark) 100%);
-  padding: 15px 0;
-  margin-bottom: 30px;
+  padding: 20px 0;
   box-shadow: 
-    0 4px 15px var(--shadow-color),
+    2px 0 15px var(--shadow-color),
     inset 0 1px 3px rgba(184, 134, 11, 0.3);
-  border-bottom: 3px solid var(--gold-accent);
+  border-right: 3px solid var(--gold-accent);
   backdrop-filter: blur(10px);
-  opacity: 1;
   visibility: visible;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 nav::before {
@@ -211,56 +213,43 @@ nav::before {
       rgba(184, 134, 11, 0.1) 20px,
       rgba(184, 134, 11, 0.1) 40px
     );
-  opacity: 0.3;
   pointer-events: none;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
-  padding: 0 20px;
-  opacity: 1;
-  visibility: visible;
-  position: relative;
-  z-index: 2;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
 }
 
 nav li {
-  margin: 4px;
+  margin: 0;
   transition: all 0.3s ease;
   position: relative;
-  opacity: 1;
-  visibility: visible;
-}
-
-nav li:hover {
-  transform: translateY(-2px);
 }
 
 nav a {
   color: var(--parchment-light);
   text-decoration: none;
   font-weight: 500;
-  font-size: 0.9rem;
+  font-size: 1rem;
   transition: all 0.3s ease;
   position: relative;
-  padding: 10px 15px;
+  padding: 10px 20px;
   border-radius: 8px;
   background: rgba(184, 134, 11, 0.2);
   border: 2px solid var(--gold-accent);
   display: block;
   text-align: center;
-  min-width: 85px;
+  width: 100%;
   box-shadow: 
     inset 0 1px 3px rgba(184, 134, 11, 0.4),
     0 2px 6px rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(3px);
-  opacity: 1;
-  visibility: visible;
-  font-family: 'Cinzel', serif;
 }
 
 nav a:hover { 
@@ -314,6 +303,8 @@ main {
   visibility: visible;
   opacity: 1;
   min-height: 300px;
+  margin-left: 270px;
+  text-align: justify;
 }
 
 main::before {
@@ -471,6 +462,7 @@ p, li {
   line-height: 1.8;
   color: var(--ink-dark);
   margin-bottom: 15px;
+  text-align: justify;
 }
 
 ol, ul { 

@@ -75,7 +75,6 @@
         tl.from(header, { 
           duration: 1.2, 
           y: -60, 
-          opacity: 0, 
           ease: 'elastic.out(1, 0.5)'
         });
 
@@ -98,7 +97,6 @@
       if (navItems.length > 0) {
         tl.from(navItems, { 
           duration: 0.8, 
-          opacity: 0, 
           y: 30, 
           stagger: 0.08, 
           ease: 'back.out(1.4)' 
@@ -109,7 +107,6 @@
       if (main) {
         tl.from(main, { 
           duration: 1.2, 
-          opacity: 0, 
           y: 40, 
           ease: 'power2.out' 
         }, '-=0.3');
@@ -123,7 +120,6 @@
         if (lifestyleCards.length > 0) {
           gsap.from(lifestyleCards, { 
             duration: 0.8, 
-            opacity: 0, 
             y: 50, 
             stagger: 0.2, 
             delay: 1.2, 
@@ -135,7 +131,6 @@
         if (mechanicCards.length > 0) {
           gsap.from(mechanicCards, { 
             duration: 0.7, 
-            opacity: 0, 
             scale: 0.8, 
             stagger: 0.15, 
             delay: 1.2, 
@@ -147,7 +142,6 @@
         if (warCards.length > 0) {
           gsap.from(warCards, { 
             duration: 0.6, 
-            opacity: 0, 
             x: -30, 
             stagger: 0.1, 
             delay: 1.2, 
@@ -159,7 +153,6 @@
         if (techCards.length > 0) {
           gsap.from(techCards, { 
             duration: 0.8, 
-            opacity: 0, 
             rotationY: 45, 
             stagger: 0.1, 
             delay: 1.2, 
@@ -173,7 +166,6 @@
       if (sections.length > 0) {
         gsap.from(sections, { 
           duration: 0.8, 
-          opacity: 0, 
           y: 30, 
           stagger: 0.2, 
           delay: 1.5, 
@@ -186,7 +178,6 @@
       if (headings.length > 0) {
         gsap.from(headings, { 
           duration: 0.6, 
-          opacity: 0, 
           x: -20, 
           stagger: 0.1, 
           delay: 1.8, 

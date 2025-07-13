@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="War in Tales of the Seven Seas - Strategies and battles for dominance.">
+  <title>War - Tales of the Seven Seas</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header>
+    <h1>
+      <img src="assets/images/logo.jpg" alt="Tales of the Seven Seas Logo" class="header-logo">
+      Tales of the Seven Seas
+    </h1>
+  </header>
+
+  <nav aria-label="Main navigation">
+    <ul>
+      <li><a href="index.html">🏰 Home</a></li>
+      <li><a href="spawning.html">⚔️ Spawning</a></li>
+      <li><a href="basic-mechanics.html">⚙️ Mechanics</a></li>
+      <li><a href="nation-types.html">👑 Nation Types</a></li>
+      <li><a href="migration.html">🏃‍♂️ Migration</a></li>
+      <li><a href="map.html">🗺️ Map & Visibility</a></li>
+      <li><a href="terrain.html">🏔️ Terrain</a></li>
+      <li><a href="exploration.html">🚢 Exploration</a></li>
+      <li><a href="worldbuilding.html">📜 Worldbuilding</a></li>
+      <li><a href="land-resources.html">🌾 Land & Resources</a></li>
+      <li><a href="culture-technology.html">🔬 Culture & Tech</a></li>
+      <li><a href="war.html" class="active">⚔️ War</a></li>
+      <li><a href="treaties.html">🤝 Treaties</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="page-hero">
+      <h2>War</h2>
+      <p>Master strategies and lead your nation to victory in Tales of the Seven Seas.</p>
+    </section>
+
+    <section class="game-details">
+      <h3>Revised War System</h3>
+      <h4>Casus Belli</h4>
+      <ul>
+        <li><strong>Skirmish:</strong>
+          <ul>
+            <li>Declaration: Declare 1-20 tiles to capture.</li>
+            <li>Victory Requirement: Hold &gt;50% of declared tiles by end of Turn 4 OR opponent surrenders.</li>
+            <li>Victory: Capture declared tiles + 1 loot per 3 tiles held.</li>
+            <li>Defeat: Opponent may demand 50% of undeclared tiles they hold.</li>
+          </ul>
+        </li>
+        <li><strong>Conquest:</strong>
+          <ul>
+            <li>Declaration: Declare 1-3 settlements to capture (no capitals unless only city).</li>
+            <li>Victory Requirement: Capture settlements within 6 turns.</li>
+            <li>Victory: Gain settlements + 3 tiles/settlement (must maintain territorial contiguity).</li>
+            <li>Defeat: Lose settlements + opponent may relocate orphaned tiles.</li>
+          </ul>
+        </li>
+        <li><strong>Raid:</strong>
+          <ul>
+            <li>Declaration: Declare loot target (1-15).</li>
+            <li>Victory Requirement: Generate loot through battles/sieges within 4 turns.</li>
+            <li>Victory: Gain declared loot.</li>
+            <li>Defeat: Pay opponent 1/2 declared loot value.</li>
+          </ul>
+        </li>
+        <li><strong>Subjugation:</strong>
+          <ul>
+            <li>Declaration: State conditions (vassalization, cultural change, etc.).</li>
+            <li>Victory Requirement: Capture capital OR hold 50% settlements for 2 turns.</li>
+            <li>Victory: Enforce conditions + 1 settlement/3 tiles/2 loot.</li>
+            <li>Defeat: Opponent may demand 1 settlement OR 3 tiles OR 2 loot.</li>
+          </ul>
+        </li>
+      </ul>
+
+      <h4>Army System</h4>
+      <ul>
+        <li><strong>Creation Cost:</strong> 1 Labor (halts regeneration only during active battle turns).</li>
+        <li><strong>Maintenance:</strong> After Turn 3, costs 1 Food/army/turn.</li>
+        <li><strong>Settlement Limits:</strong>
+          <ul>
+            <li>Town: 1 army.</li>
+            <li>City: 3 armies.</li>
+            <li>Metropolis: 5 armies.</li>
+          </ul>
+        </li>
+        <li><strong>Unit Costs (Pre-war purchases only):</strong>
+          <table>
+            <thead>
+              <tr>
+                <th>Unit</th>
+                <th>Cost</th>
+                <th>Stats (Atk/Def/Move)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Infantry</td>
+                <td>Base</td>
+                <td>1/-/1</td>
+              </tr>
+              <tr>
+                <td>Shock</td>
+                <td>1 Bronze</td>
+                <td>1/Immune*/1</td>
+              </tr>
+              <tr>
+                <td>Archer</td>
+                <td>1 Timber</td>
+                <td>1/-/1 (Range 2)</td>
+              </tr>
+              <tr>
+                <td>Cavalry</td>
+                <td>1 Mount</td>
+                <td>1/-/3</td>
+              </tr>
+              <tr>
+                <td>Light Chariot</td>
+                <td>1 Mount</td>
+                <td>1/Immune**/3</td>
+              </tr>
+              <tr>
+                <td>Heavy Chariot</td>
+                <td>1 Mount</td>
+                <td>1/Immune***/2</td>
+              </tr>
+              <tr>
+                <td>Commander</td>
+                <td>Auto-incl</td>
+                <td>1/Immune****/1</td>
+              </tr>
+            </tbody>
+          </table>
+        </li>
+      </ul>
+
+      <h4>New Mechanics</h4>
+      <ul>
+        <li><strong>Supply Lines:</strong> Armies beyond expansion range 2+ turns lose 1 random unit/turn.</li>
+        <li><strong>War Weariness:</strong>
+          <ul>
+            <li>After Turn 4: +1 Food maintenance/army/turn.</li>
+            <li>After Turn 6: -1 Combat Strength to all units.</li>
+          </ul>
+        </li>
+        <li><strong>Diplomatic Penalties:</strong> Aggressor loses 1 Diplomatic Favor per war declaration.</li>
+        <li><strong>Scouting:</strong> 1 free Scout unit per army:
+          <ul>
+            <li>Movement: 5 tiles.</li>
+            <li>Reveals enemy positions in adjacent tiles.</li>
+            <li>Cannot attack/be attacked.</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <section class="call-to-action">
+      <h3>Ready for Battle?</h3>
+      <p>Prepare your nation for war and lead them to glory in Tales of the Seven Seas.</p>
+      <div class="cta-buttons">
+        <a href="spawning.html" class="cta-primary">⚔️ Start Spawning</a>
+        <a href="index.html" class="cta-secondary">🏰 Back to Home</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Tales of the Seven Seas. All rights reserved.</p>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
