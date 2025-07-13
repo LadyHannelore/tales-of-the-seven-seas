@@ -1,0 +1,33 @@
+# Temporary files
+*_test.html
+*_simple.html
+*_backup.html
+*.tmp
+*.temp
+
+# Development files
+.DS_Store
+Thumbs.db
+*.log
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node modules (if any)
+node_modules/
+
+# Build artifacts
+dist/
+build/
+
+# Cache files
+*.cache
+.cache/
+
+# OS generated files
+.DS_Store?
+ehthumbs.db
+Icon?

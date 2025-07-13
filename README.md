@@ -1,13 +1,85 @@
-# Tales of the Seven Seas Tutorial Site
+# Tales of the Seven Seas
+## Medieval Nation-Building Roleplay Game Tutorial Website
 
-This repository contains a comprehensive static tutorial website for **Tales of the Seven Seas**—an exploration-worldbuilding nation roleplay game where you build fictional cultures on an alternate-geography map, starting from the Bronze Age.
+### 🏰 Project Overview
+A comprehensive tutorial website for Tales of the Seven Seas, an exploration-worldbuilding nation roleplay game set in the Bronze Age. The website features a medieval manuscript aesthetic with detailed game mechanics documentation.
+
+### 📁 Project Structure
+```
+tales-of-the-seven-seas/
+├── assets/
+│   ├── css/
+│   │   └── style.css          # Medieval-themed styling
+│   ├── images/                # Game assets and visuals
+│   └── js/
+│       └── main.js           # GSAP animations and interactions
+├── index.html                # Main landing page
+├── spawning.html             # Nation creation guide
+├── basic-mechanics.html      # Core gameplay systems
+├── nation-types.html         # Player categories
+├── migration.html            # Emergency relocation
+├── map.html                  # Navigation and visibility
+├── terrain.html              # Landscape types
+├── exploration.html          # Discovery mechanics
+├── worldbuilding.html        # Lore creation and rewards
+├── land-resources.html       # Territory and economics
+├── culture-technology.html   # Civilization advancement
+├── war.html                  # Strategic conflict system
+├── treaties.html             # Diplomatic relationships
+└── README.md                 # This file
+```
+
+### 🎨 Design Features
+- **Medieval Aesthetic**: Parchment backgrounds, illuminated manuscripts style
+- **Medieval Typography**: Cinzel font family for authentic period feel
+- **Interactive Elements**: GSAP-powered animations and hover effects
+- **Responsive Design**: Mobile-optimized layouts and navigation
+- **Color Palette**: Gold accents, ink colors, and aged paper tones
+
+### 🚀 Key Sections
+1. **Landing Page** (`index.html`) - Game introduction and navigation hub
+2. **Essential Guides** - Core mechanics for new players
+3. **World Mastery** - Intermediate exploration and navigation
+4. **Advanced Systems** - Complex diplomatic and technological content
+
+### 🛠️ Technologies Used
+- **HTML5**: Semantic structure and accessibility
+- **CSS3**: Custom properties, grid layouts, medieval theming
+- **JavaScript**: GSAP 3.12.2 for animations
+- **Google Fonts**: Cinzel, Cinzel Decorative, Uncial Antiqua
+
+### 📖 Game Content Covered
+- Nation spawning and customization
+- Resource management and expansion
+- Combat system (war chess mechanics)
+- Diplomatic relations and treaties
+- Cultural development and technology
+- Exploration and worldbuilding rewards
+
+### 🎯 Target Audience
+Players interested in:
+- Medieval/Bronze Age settings
+- Nation-building and strategy games
+- Collaborative storytelling and roleplay
+- Complex diplomatic and economic systems
+
+### 📱 Browser Compatibility
+- Modern browsers with CSS Grid support
+- Responsive design for mobile and desktop
+- Progressive enhancement for older browsers
+
+### 🔄 Development Status
+✅ Complete tutorial content integration
+✅ Medieval aesthetic implementation
+✅ Responsive navigation system
+✅ Interactive animations and effects
+✅ Comprehensive war system documentation
+✅ Cross-page consistency and styling
 
 ---
 
-## Features
-
-- **Comprehensive multi-page structure** covering all game aspects:
-  - **Home** (`index.html`) - Welcome and quick reference
+**Last Updated**: July 13, 2025  
+**Version**: 2.0 - Medieval Manuscript Edition
   - **Spawning Your Nation** (`spawning.html`) - Character creation and lifestyle selection
   - **Basic Mechanics** (`basic-mechanics.html`) - Core gameplay systems
   - **Nation Types** (`nation-types.html`) - Player, Mod, and NPC nations
