@@ -132,6 +132,14 @@ header h1 {
   flex-wrap: wrap;
 }
 
+/* Align fleur-de-lis symbols */
+header h1::before, header h1::after {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+}
+
 .header-logo {
   width: 60px;
   height: 60px;
@@ -764,6 +772,22 @@ figure img[src*="map"] {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 25px;
   margin: 30px 0;
+}
+
+/* Fixing alignment and spacing for mechanics, map, and worldbuilding sections */
+
+/* Ensure sections have consistent spacing */
+section {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+/* Adjust copyright alignment */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: var(--parchment-medium);
+  border-top: 2px solid var(--gold-accent);
 }
 
 /* Emergency debugging styles - ensure visibility */
