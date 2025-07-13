@@ -158,6 +158,11 @@
       </ul>
     </section>
 
+    <section class="battle-simulator">
+      <h3>Test Your Strategies</h3>
+      <p>Enhance your war tactics with our <a href="https://ladyhannelore.github.io/battle-sim/" class="fancy-link">Battle Simulator</a>.</p>
+    </section>
+
     <section class="call-to-action">
       <h3>Ready for Battle?</h3>
       <p>Prepare your nation for war and lead them to glory in Tales of the Seven Seas.</p>
@@ -173,5 +178,37 @@
   </footer>
 
   <script src="assets/js/main.js"></script>
+
+  <style>
+    .fancy-link {
+      color: var(--illuminated-blue);
+      font-weight: bold;
+      text-decoration: none;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    .fancy-link::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 100%;
+      height: 2px;
+      background: var(--gold-accent);
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.3s ease;
+    }
+
+    .fancy-link:hover {
+      color: var(--illuminated-red);
+    }
+
+    .fancy-link:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+  </style>
 </body>
 </html>

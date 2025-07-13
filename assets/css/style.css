@@ -232,10 +232,20 @@ nav ul {
   text-align: left;
 }
 
+nav ul::after {
+  content: '';
+  display: block;
+  margin: 20px 0;
+}
+
 nav li {
   margin: 0;
   transition: all 0.3s ease;
   position: relative;
+}
+
+nav li.battle-simulator {
+  list-style: none;
 }
 
 nav a {
@@ -266,6 +276,10 @@ nav a:hover {
     inset 0 1px 3px rgba(44, 24, 16, 0.3),
     0 4px 12px rgba(184, 134, 11, 0.6);
   border-color: var(--parchment-light);
+}
+
+nav ul li:last-child {
+  margin-top: 20px;
 }
 
 /* Active Navigation State */
