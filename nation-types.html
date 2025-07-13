@@ -9,31 +9,72 @@
 <body>
   <header>
     <h1>Nation Types</h1>
-    <nav>
+    <nav aria-label="Main navigation">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="spawning.html">Spawning</a></li>
         <li><a href="basic-mechanics.html">Mechanics</a></li>
         <li><a href="nation-types.html">Nation Types</a></li>
         <li><a href="migration.html">Migration</a></li>
+        <li><a href="map.html">Map & Visibility</a></li>
+        <li><a href="terrain.html">Terrain</a></li>
         <li><a href="exploration.html">Exploration</a></li>
         <li><a href="worldbuilding.html">Worldbuilding</a></li>
+        <li><a href="land-resources.html">Land & Resources</a></li>
+        <li><a href="culture-technology.html">Culture & Tech</a></li>
+        <li><a href="war.html">War</a></li>
+        <li><a href="treaties.html">Treaties</a></li>
       </ul>
     </nav>
   </header>
   <main>
-    <ul>
-      <li><strong>Player Nations</strong>: Regular nations played by users.</li>
-      <li><strong>Mod Nations</strong>: Played by mods with extra restrictions and rewards:
+    <h2>Nation Types</h2>
+    
+    <section>
+      <h3>Player Nation</h3>
+      <div class="nation-type-card">
+        <p>Regular nations by players.</p>
         <ul>
-          <li>View the full map; expand without exploring (unless on the frontier).</li>
-          <li>Cannot post exploration roleplay; earn 100 coins/month for mod work.</li>
-          <li>Two Mod nations cannot jointly declare war on a single Player nation (unless that Player is regionally dominant).</li>
-          <li>Cannot share undiscovered internal game info.</li>
+          <li>Standard gameplay experience</li>
+          <li>Full access to all mechanics</li>
+          <li>Can engage in exploration, warfare, diplomacy, and trade</li>
+          <li>Must follow standard coin generation and resource rules</li>
         </ul>
-      </li>
-      <li><strong>NPC Nations</strong>: Mods control these for narrative; they have only Lifestyle and one Culture ability.</li>
-    </ul>
+      </div>
+    </section>
+
+    <section>
+      <h3>Mod Nation</h3>
+      <div class="nation-type-card">
+        <p>Nations played by mods. They have extra restrictions and rewards from their mod work.</p>
+        
+        <h4>Special Abilities</h4>
+        <ul>
+          <li>Mod nation may see the full map, and expand without exploring, unless in frontier</li>
+          <li>Mod nations cannot post exploration roleplay</li>
+          <li>Mod nation get 100 coins per month as payment for mod work</li>
+        </ul>
+        
+        <h4>Restrictions</h4>
+        <ul>
+          <li>Two Mod nations cannot declare war against one player nation, unless that player nation is dominant in their region</li>
+          <li>Mod nation cannot meta-game and share internal information relating to undiscovered parts of the game</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h3>NPC</h3>
+      <div class="nation-type-card">
+        <p>NPC nations played by mods. The only two stats they have are lifestyle and 1 culture ability. They are used for narrative purposes as deemed appropriate.</p>
+        <ul>
+          <li>Controlled entirely by moderators</li>
+          <li>Limited stats for streamlined gameplay</li>
+          <li>Serve story and worldbuilding purposes</li>
+          <li>Cannot be played by regular players</li>
+        </ul>
+      </div>
+    </section>
   </main>
   <script src="assets/js/main.js"></script>
 </body>

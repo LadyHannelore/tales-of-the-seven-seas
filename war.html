@@ -21,54 +21,222 @@
         <li><a href="terrain.html">Terrain</a></li>
         <li><a href="exploration.html">Exploration</a></li>
         <li><a href="worldbuilding.html">Worldbuilding</a></li>
+        <li><a href="land-resources.html">Land & Resources</a></li>
+        <li><a href="culture-technology.html">Culture & Tech</a></li>
         <li><a href="war.html">War</a></li>
+        <li><a href="treaties.html">Treaties</a></li>
       </ul>
     </nav>
   </header>
   <main>
+    <h2>War System</h2>
+    <p>Ready to fight some wars? You may declare war against 1 nation to capture land, cities, loot (check siege section), or gain diplomatic favors.</p>
+
     <section>
-      <h2>War Declaration</h2>
-      <p>Ready to fight some wars? You may declare war against one nation to capture land, cities, loot, or gain diplomatic favors. To declare, select one of four <em>casus belli</em>. This determines victory requirements and outcomes. After choosing, create a war ticket, mention your opponent, and attach a map of your target tiles.</p>
-      <p><strong>Important:</strong> Both sides enter a mutual two-week cooldown after war ends. You cannot declare a new war while already at war or during cooldown.</p>
+      <h3>War Declaration</h3>
+      <p>To declare a war you must select 1 of 4 casus belli, which will determine your victory requirement, and your victory and defeat conditions. When a victory requirement is met, a war ends with the victor gaining the victory condition. If the victory requirement is not met, the opponent will gain the defeat condition.</p>
+      
+      <p>After selecting a casus belli, create a war ticket, mention your opponent, and create your war declaration message.</p>
+      
+      <h4>Casus Belli List</h4>
+      <div class="casus-belli-grid">
+        <div class="casus-card">
+          <h5>Skirmish</h5>
+          <p><strong>Declaration:</strong> Declare 1-20 tiles on the map to capture</p>
+          <p><strong>Victory requirement:</strong> Hold all these tiles by the end of the 4th turn, or opponent surrenders</p>
+          <p><strong>Victory condition:</strong> Capture 1-20 tiles per declaration</p>
+          <p><strong>Defeat condition:</strong> Opponent may demand 1-20 tiles on the map which they hold by the end of the 4th turn</p>
+        </div>
+        
+        <div class="casus-card">
+          <h5>Conquest</h5>
+          <p><strong>Declaration:</strong> Declare 1-3 settlements on the map to capture (excluding capital, unless it's their only city)</p>
+          <p><strong>Victory requirement:</strong> Capture 1-5 settlements within 6 turns, or opponent surrenders</p>
+          <p><strong>Victory condition:</strong> Gain 1-5 settlements per declaration + 3 tiles per settlement (must not left opponent with tiles outside their expansion range, unless necessary)</p>
+          <p><strong>Defeat condition:</strong> Lost 1-5 settlements which the opponent manage to hold by the end of the 6th turn + 3 tiles per settlement</p>
+        </div>
+        
+        <div class="casus-card">
+          <h5>Raid</h5>
+          <p><strong>Declaration:</strong> Capture 1-15 loot</p>
+          <p><strong>Victory requirement:</strong> Capture 1-15 loot within 4 turns, or opponent surrenders</p>
+          <p><strong>Victory condition:</strong> 1-15 loot</p>
+          <p><strong>Defeat condition:</strong> Opponent gain 1-15 loot they manage to capture by the end of the 4th turn</p>
+        </div>
+        
+        <div class="casus-card">
+          <h5>Subjugation</h5>
+          <p><strong>Declaration:</strong> Subjugate the opponent to follow certain conditions (vassalization, culture conversion, stop doing roleplay offensive to your nation, others as approved by mod)</p>
+          <p><strong>Victory requirement:</strong> Capture opponent's capital within 6 turns</p>
+          <p><strong>Victory condition:</strong> Subjugate the opponent to follow the declaration condition + 1 settlement/1-6 tiles/1-3 loot</p>
+          <p><strong>Defeat condition:</strong> Opponent may demand 1 settlement (within expansion range), 1-6 tiles, 1-3 loot, or other favors as reparations (approved by mod), or subjugate the opponent if their capital is captured within 6 turns</p>
+        </div>
+      </div>
+      
+      <div class="war-restrictions">
+        <h4>War Restrictions</h4>
+        <ul>
+          <li>You may only declare 1 war at a time</li>
+          <li>After you finish a war, you will not be able to declare on the same opponent for 2 weeks, but the opponent can declare on you</li>
+          <li>Players will be automatically protected 2 weeks after spawning</li>
+          <li>Players may refuse a full annexation, or a war declaration if they are already in a war</li>
+        </ul>
+      </div>
     </section>
+
     <section>
-      <h2>Casus Belli</h2>
+      <h3>Army System</h3>
+      <p>Armies will let you conquer cities, raid, and protect your land. You may create an army with 1 labor, which will stop the labor from regenerating until the war ends.</p>
+      
+      <p>At the beginning of a war, both sides may distribute their armies around their settlements however they like, at a maximum equal to that settlement's population (1 for town, 3 for cities, 5 for metropolis).</p>
+      
+      <h4>Army Composition</h4>
+      <p>Each army consist of individual <strong>units</strong> you may use in battle or maneuver across the battlefield. 1 army automatically start with 5 infantry units and 1 commander unit. The player may purchase 2 more modifications per army at the following cost, adding those units to your army. You may purchase these modifications at any time during the war.</p>
+      
+      <div class="army-units">
+        <div class="unit-cost">
+          <span class="cost">1 bronze:</span> 3 shock unit
+        </div>
+        <div class="unit-cost">
+          <span class="cost">1 timber:</span> 3 archer unit
+        </div>
+        <div class="unit-cost">
+          <span class="cost">1 mount:</span> 4 cavalry unit
+        </div>
+        <div class="unit-cost">
+          <span class="cost">1 mount:</span> 2 chariot unit
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h3>Maneuvering</h3>
+      <p>Each war is divided into turns, one turn lasting 1-3 days. For each turn, you may choose to:</p>
       <ul>
-        <li><strong>Skirmish</strong>: Capture 1–20 tiles. Victory: hold all by turn 4 or opponent surrenders. Defeat: opponent demands 1–20 tiles they hold at turn 4.</li>
-        <li><strong>Conquest</strong>: Capture 1–3 settlements (excluding capitals). Victory: seize 1–5 settlements by turn 6. +3 tiles per settlement. Defeat: lose same.</li>
-        <li><strong>Raid</strong>: Capture 1–15 loot items. Victory: seize 1–15 loot by turn 4. Defeat: opponent seizes 1–15 loot.</li>
-        <li><strong>Subjugation</strong>: Subjugate opponent under conditions. Victory: capture capital by turn 6. Defeat: opponent demands reparations or subjugation.</li>
+        <li><strong>Maneuver:</strong> Move each army 3 tiles by land (or water after unlocking shipbuilding). If the army move outside of their nation's expansion range (3 tiles around each settlement), they must pay 1 food per 3 tile movement, or 1 mount for 6 tile movement. 2 armies may occupy the same tile</li>
+        <li><strong>Battle</strong></li>
+        <li><strong>Do nothing</strong></li>
       </ul>
+      
+      <div class="maneuver-rules">
+        <h4>Maneuver Rules</h4>
+        <ul>
+          <li>If both players choose to do nothing for 2 turns, the war will end</li>
+          <li>If a player does not respond in their turn after 3 days, they are considered as doing nothing unless specified later</li>
+          <li>If an army maneuvers through foreign territory, that player may choose to approve of the maneuver, start a war with the maneuvering army, or fund the maneuvering army by trading them goods</li>
+          <li>They may not join the war themselves against the same target</li>
+          <li>If the nation approves, your maneuvering will not count as being beyond expansion range and thus does not need extra food</li>
+        </ul>
+      </div>
     </section>
+
     <section>
-      <h2>Armies & Units</h2>
-      <p>Create an army by spending 1 labor (this halts labor regen). At war start, distribute armies by settlement population (1 for town, 3 for city, 5 for metropolis). Each army (max 10 units) begins with:</p>
-      <ul>
-        <li>5 Infantry units</li>
-        <li>1 Commander unit</li>
-      </ul>
-      <p>Purchase up to two unit upgrades per army:</p>
-      <ul>
-        <li>1 Bronze → 3 Shock units</li>
-        <li>1 Timber → 3 Archer units</li>
-        <li>1 Mount → 4 Cavalry units</li>
-        <li>1 Mount → 2 Chariot units</li>
-      </ul>
-    </section>
-    <section>
-      <h2>Maneuvering & Battle</h2>
-      <p>Wars proceed in 1–3 day turns:</p>
-      <ol>
-        <li><strong>Maneuver:</strong> Move armies up to 3 tiles (land) or as allowed by ship tech. Exiting expansion range costs food or mounts. Allied territory requires permission to avoid extra cost.</li>
-        <li><strong>Battle:</strong> Armies on the same tile may initiate war chess on a 9×9 board. Each unit has Attack, Defense, and Movement stats; battles resolve via placement, combat, and rally phases.</li>
-        <li><strong>No Action:</strong> If either side is inactive for 3 consecutive turns (skips actions or no response within 3 days), the war ends.</li>
-        <li><strong>Turn Limit:</strong> A war automatically ends after 10 turns regardless of activity.</li>
-      </ol>
-    </section>
-    <section>
-      <h2>Sieges & Treaties</h2>
-      <p>Sieges occur on settlement tiles; unguarded cities fall automatically. Siege battles use the same war chess rules on a 4×9 board. Loot is granted per settlement tier.</p>
-      <p>Treaties allow diplomatic deals. Post in worldbuilding chat and sign. They have no automatic effect unless enforced by writing tech or as peace treaties.</p>
+      <h3>Battle System</h3>
+      <p>When 2 or more armies occupy the same tile, any of them may decide to start a battle. This is done using a board game, war chess, where each unit will move on a 9×9 board to eliminate all enemy units on the board.</p>
+      
+      <h4>Unit Types</h4>
+      <p>Each unit has the following property in war chess: Attack, Defense, and movement.</p>
+      
+      <div class="unit-types">
+        <div class="unit-card">
+          <h5>Infantry</h5>
+          <p><strong>Attack:</strong> Automatically attack 1 tile in front</p>
+          <p><strong>Defense:</strong> None</p>
+          <p><strong>Movement:</strong> 1 tile in any directions</p>
+        </div>
+        
+        <div class="unit-card">
+          <h5>Shock</h5>
+          <p><strong>Attack:</strong> Automatically attack 1 tile in front</p>
+          <p><strong>Defense:</strong> Immune to attacks single from infantry, cavalry, and commander, may be killed by multiple attacks from infantry, cavalry, and commander. Can be injured but cannot die from injury</p>
+          <p><strong>Movement:</strong> 1 tile in any directions</p>
+        </div>
+        
+        <div class="unit-card">
+          <h5>Archer</h5>
+          <p><strong>Attack:</strong> May select "fire arrow" action, and select any target within a 3 tile firing range. When firing at a target, they will be injured. An injured target will have a slightly weaker defense than their regular counterparts</p>
+          <p><strong>Defense:</strong> None</p>
+          <p><strong>Movement:</strong> 1 tile in 4 cardinal directions</p>
+        </div>
+        
+        <div class="unit-card">
+          <h5>Commander</h5>
+          <p><em>Must have 1 per color</em></p>
+          <p><strong>Attack:</strong> Automatically attack 1 tile in front</p>
+          <p><strong>Defense:</strong> Immune to a single attacks by infantry and cavalry. May die from multiple attacks by infantry and cavalry, or from 1 shock. Immune to injury</p>
+          <p><strong>Movement:</strong> 1 tile in any directions</p>
+        </div>
+        
+        <div class="unit-card">
+          <h5>Cavalry</h5>
+          <p><strong>Attack:</strong> Automatically attack 1 tile in front</p>
+          <p><strong>Defense:</strong> None</p>
+          <p><strong>Movement:</strong> 3 tiles in any directions</p>
+        </div>
+        
+        <div class="unit-card">
+          <h5>Light Chariot</h5>
+          <p><em>Chariot with infantry or archer rider</em></p>
+          <p><strong>Attack:</strong> Automatically attack 1 tile in front + fire arrow for archer rider</p>
+          <p><strong>Defense:</strong> Immune to single attacks from infantry, cavalry, commander. May die from multiple attacks. Immune to shock attack in front. May die from shock attack from the side or back</p>
+          <p><strong>Movement:</strong> 3 tiles in 4 directions</p>
+        </div>
+        
+        <div class="unit-card">
+          <h5>Heavy Chariot</h5>
+          <p><em>Chariot with shock or commander rider</em></p>
+          <p><strong>Attack:</strong> Automatically attack 1 tile in front</p>
+          <p><strong>Defense:</strong> Immune to 1-2 attacks from infantry, cavalry, commander. May die from 3 or more attacks. Immune to 1 shock attack. May die from 2 or more shock attacks</p>
+        </div>
+      </div>
+      
+      <h4>Battle Phases</h4>
+      <p>War chess is divided into 3 phases, placement, battle, and rally phase. The aggressor will be red, and the defender will be blue.</p>
+      
+      <div class="battle-phases">
+        <div class="phase-card">
+          <h5>Placement Phase</h5>
+          <p>Starting with red, the player may place their unit anywhere on the 5×2 area on their side of the board. Then the blue player will get their turn.</p>
+          <p>If you have more than 1 army within the tile, you may place all army's unit on the battlefield, but with only 1 commander. When placing a chariot unit, each chariot must have 1 rider unit being either infantry, archer, shock, or commander. Infantry unit serve as a default rider for the chariot and will not subtract from your infantry unit.</p>
+        </div>
+        
+        <div class="phase-card">
+          <h5>Battle Phase</h5>
+          <p>Red player gets their turn first. Each turn, you may do 1 of 4 action per unit:</p>
+          <ul>
+            <li>Move the unit</li>
+            <li>Turn the unit to face any 4 directions</li>
+            <li>Attack: for archers only</li>
+            <li>Nothing</li>
+          </ul>
+          <p>After you have moved all units, you may end your turn. Your movement cannot be canceled. Then, the death of each side's unit will be calculated.</p>
+        </div>
+        
+        <div class="phase-card">
+          <h5>Rally Phase</h5>
+          <p>At the end of a battle, each side will calculate the remaining units in their army:</p>
+          <p><strong>Remaining units = Surviving units + Retreated units (your own) + captured units (from the opponent)</strong></p>
+          <p>If your remaining units no longer have a commander, it will be added to 1 army of your choice. Your remaining units will constitute your army, which you may continue to use to fight the war.</p>
+        </div>
+      </div>
+      
+      <h4>Siege</h4>
+      <p>Sieges constitute a special kind of battle, centered around settlements. When opposing armies are on a settlement tile, they may declare a siege. The siege will be fought with all armies in the settlement tile, including those who never left the settlement. If the settlement is unguarded, it is automatically captured.</p>
+      
+      <p>In a siege, your army may be placed anywhere on the 4×9 area on your side of the board.</p>
+      
+      <p>If a commander is no longer from the board, the opponent automatically conquers the settlement. If they do, they will gain 1 loot per town, 4 per city, and 9 per metropolis. Each loot represents goods you can demand from your opponent.</p>
+      
+      <div class="loot-values">
+        <h5>Loot Values</h5>
+        <p>1 loot can be demanded for:</p>
+        <ul>
+          <li>1 labor</li>
+          <li>30 coins</li>
+          <li>2 resources of your choice</li>
+        </ul>
+        <p>The goods you selected must be owned by the opposing nation.</p>
+      </div>
     </section>
   </main>
   <footer>

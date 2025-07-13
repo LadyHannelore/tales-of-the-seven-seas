@@ -1,24 +1,40 @@
 # Tales of the Seven Seas Tutorial Site
 
-This repository contains a static tutorial website for **Tales of the Seven Seas**—an exploration-worldbuilding nation roleplay game. The site is built with plain HTML, CSS, and JavaScript, and includes GSAP animations.
+This repository contains a comprehensive static tutorial website for **Tales of the Seven Seas**—an exploration-worldbuilding nation roleplay game where you build fictional cultures on an alternate-geography map, starting from the Bronze Age.
 
 ---
 
 ## Features
 
-- **Multi-page structure** covering:
-  - **Home** (`index.html`)
-  - **Spawning Your Nation** (`spawning.html`)
-  - **Basic Mechanics** (`basic-mechanics.html`)
-  - **Nation Types** (`nation-types.html`)
-  - **Migration** (`migration.html`)
-  - **Map & Visibility** (`map.html`)
-  - **Terrain Types** (`terrain.html`)
-  - **Exploration Campaigns** (`exploration.html`)
-  - **Worldbuilding & Currency** (`worldbuilding.html`)
-- **Responsive design** via a single CSS file (`assets/css/style.css`).
-- **GSAP animations** in `assets/js/main.js` for dynamic page loads and page-specific effects.
-- **Image assets** in `assets/images/` supporting maps, terrain, visibility diagrams, etc.
+- **Comprehensive multi-page structure** covering all game aspects:
+  - **Home** (`index.html`) - Welcome and quick reference
+  - **Spawning Your Nation** (`spawning.html`) - Character creation and lifestyle selection
+  - **Basic Mechanics** (`basic-mechanics.html`) - Core gameplay systems
+  - **Nation Types** (`nation-types.html`) - Player, Mod, and NPC nations
+  - **Migration** (`migration.html`) - Emergency relocation mechanics
+  - **Map & Visibility** (`map.html`) - Navigation and exploration
+  - **Terrain Types** (`terrain.html`) - Environmental effects and modifiers
+  - **Exploration Campaigns** (`exploration.html`) - Discovery and adventure
+  - **Worldbuilding & Currency** (`worldbuilding.html`) - Lore creation and coin system
+  - **Land & Resources** (`land-resources.html`) - Territory expansion and resource management
+  - **Culture & Technology** (`culture-technology.html`) - Civilization development
+  - **War System** (`war.html`) - Strategic combat and conquest
+  - **Treaties & Diplomacy** (`treaties.html`) - Diplomatic relationships
+
+- **Professional design features**:
+  - **Responsive design** optimized for desktop and mobile
+  - **Custom CSS grid layouts** for organized content presentation
+  - **GSAP animations** with page-specific effects and smooth transitions
+  - **Accessibility features** including proper ARIA labels and semantic markup
+  - **Professional color scheme** with CSS custom properties
+  - **Interactive hover effects** and smooth navigation transitions
+
+- **Content organization**:
+  - **Card-based layouts** for easy scanning of information
+  - **Quick reference sections** for immediate access to key data
+  - **Comprehensive rule explanations** with examples and formatting
+  - **Cross-linked navigation** between related topics
+  - **Visual hierarchy** with proper heading structure
 
 ---
 
@@ -26,71 +42,114 @@ This repository contains a static tutorial website for **Tales of the Seven Seas
 
 ```
 / (repo root)
-├─ index.html
-├─ spawning.html
-├─ basic-mechanics.html
-├─ nation-types.html
-├─ migration.html
-├─ map.html
-├─ terrain.html
-├─ exploration.html
-├─ worldbuilding.html
+├─ index.html                     # Main landing page
+├─ spawning.html                  # Nation creation guide
+├─ basic-mechanics.html           # Core gameplay mechanics
+├─ nation-types.html              # Player categories explained
+├─ migration.html                 # Emergency relocation system
+├─ map.html                       # Navigation and visibility rules
+├─ terrain.html                   # Environmental effects
+├─ exploration.html               # Discovery campaigns
+├─ worldbuilding.html             # Lore and currency system
+├─ land-resources.html            # Territory and resource management
+├─ culture-technology.html        # Civilization advancement
+├─ war.html                       # Combat system and warfare
+├─ treaties.html                  # Diplomacy and agreements
+├─ README.md                      # This file
+├─ _config.yml                    # Jekyll configuration (GitHub Pages)
 ├─ assets/
 │  ├─ css/
-│  │  └─ style.css
+│  │  └─ style.css               # Main stylesheet with responsive design
 │  ├─ js/
-│  │  └─ main.js
-│  └─ images/
-│     ├─ map.png
-│     ├─ sample spawn.png
-│     ├─ terrain.png
-│     └─ visiblity.png
-└─ README.md
+│  │  └─ main.js                 # GSAP animations and interactions
+│  └─ images/                    # Visual assets
+│     ├─ map.png                 # Region map
+│     ├─ sample spawn.png        # Spawning example
+│     ├─ terrain types.png       # Terrain reference
+│     ├─ visibility.png          # Visibility mechanics
+│     └─ exploration.png         # Exploration diagram
+└─ pages/                        # Legacy page structure (preserved)
+   └─ nation-types.html          # Alternative nation types page
 ```
 
 ---
 
-## Getting Started
+## Technical Details
 
-1. **Clone or download** this repository.
-2. **Open** any `.html` file in your web browser to preview.
-   - No server is required; you can also use a simple static server (e.g., `npx serve .`).
-3. **Edit** content by modifying the HTML in the root or adding new pages following the same template:
-   - Copy the header, nav, and script tags.
-   - Place content within `<main>`.
-4. **Add images** under `assets/images/` and reference them in your page with `<img src="assets/images/yourfile.png" />`.
-5. **Customize styles** by editing `assets/css/style.css`.
-6. **Adjust animations** in `assets/js/main.js` or add new GSAP sequences.
+### CSS Architecture
+- **CSS Custom Properties** for consistent theming and easy maintenance
+- **CSS Grid and Flexbox** for responsive layouts
+- **Card-based design system** for consistent content presentation
+- **Professional color palette** with gradients and hover effects
+- **Mobile-first responsive design** with breakpoints at 768px
 
----
+### JavaScript Features
+- **GSAP 3.12.2** loaded from CDN for performance
+- **Page-specific animations** tailored to content type
+- **Smooth navigation transitions** with hover effects
+- **Progressive enhancement** - site works without JavaScript
 
-## GSAP Animations
-
-- Dynamically loaded from CDN.
-- Default fade-in of header, nav, and content.
-- Page-specific tweaked effects based on document title.
-- To modify:
-  - Open `assets/js/main.js` and adjust easing, durations, or target selectors.
-
----
-
-## Hosting on GitHub Pages
-
-1. Rename your repo to `<your-username>.github.io` or enable Pages on any branch in **Settings → Pages**.
-2. Push all files to the `main` (or `gh-pages`) branch.
-3. Your site will go live at `https://<your-username>.github.io/` within a minute.
+### Accessibility
+- **Semantic HTML5** markup throughout
+- **ARIA labels** on navigation elements
+- **Proper heading hierarchy** for screen readers
+- **High contrast ratios** for text readability
+- **Keyboard navigation** support
 
 ---
 
-## Contributing & Updates
+## Game Overview
 
-- **Content updates**: Modify or add HTML files.
-- **Images**: Place new assets under `assets/images/`.
-- **Styling**: Tweak `style.css` for layout, colors, and responsiveness.
-- **Scripts**: Extend or change animation logic in `main.js`.
+**Tales of the Seven Seas** is a nation roleplay game featuring:
 
-Feel free to submit PRs or open issues for improvements, new features, or bug fixes.
+- **Three Lifestyles**: Farmer (agriculture), Gatherer (hunting/foraging), Herder (nomadic)
+- **Alternate Earth Map**: Real-world regions correspond to fictional locations
+- **Bronze Age Setting**: Technology starts primitive and advances through research
+- **Exploration System**: Discover new lands with roleplay-driven campaigns
+- **Comprehensive Combat**: Strategic war system with multiple unit types
+- **Cultural Development**: Custom culture abilities and technology trees
+- **Economic System**: Coin-based economy driven by worldbuilding content
+- **Diplomatic Framework**: Treaties and alliances with mechanical enforcement
 
 ---
 
-**Enjoy building your world—may your seas be bountiful!**
+## Hosting
+
+This site is designed for **GitHub Pages** hosting with Jekyll support. The `_config.yml` file enables GitHub Pages processing while maintaining compatibility with static hosting.
+
+### Local Development
+1. Clone the repository
+2. Open `index.html` in a web browser
+3. Or serve with any static web server (Python's `http.server`, Live Server extension, etc.)
+
+### GitHub Pages Deployment
+1. Push to `main` branch
+2. Enable GitHub Pages in repository settings
+3. Site will be available at `https://username.github.io/repository-name`
+
+---
+
+## Browser Support
+
+- **Modern browsers** (Chrome, Firefox, Safari, Edge)
+- **Mobile browsers** with responsive design
+- **Graceful degradation** for older browsers without full CSS Grid support
+- **Progressive enhancement** with JavaScript animations
+
+---
+
+## Contributing
+
+This tutorial site serves as comprehensive documentation for the **Tales of the Seven Seas** game. Updates should maintain:
+
+- **Consistent styling** across all pages
+- **Mobile responsiveness** for all new content
+- **Accessible markup** with proper semantic structure
+- **Cross-browser compatibility** testing
+- **Content accuracy** with game mechanics
+
+---
+
+## License
+
+Content specific to **Tales of the Seven Seas** game mechanics and rules. Website code and structure available for educational purposes.

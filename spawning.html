@@ -20,40 +20,87 @@
         <li><a href="terrain.html">Terrain</a></li>
         <li><a href="exploration.html">Exploration</a></li>
         <li><a href="worldbuilding.html">Worldbuilding</a></li>
+        <li><a href="land-resources.html">Land & Resources</a></li>
+        <li><a href="culture-technology.html">Culture & Tech</a></li>
         <li><a href="war.html">War</a></li>
-        <li><a href="war.html">War</a></li>
+        <li><a href="treaties.html">Treaties</a></li>
       </ul>
     </nav>
   </header>
   <main>
-    <p><strong>You must create a fictional nation to play as.</strong><br>
-    You can’t play as any real culture or people, but may be inspired by them, putting a spin on it. Your worldbuilding can be as creative as you want, but no sci-fi or fantasy.</p>
+    <h2>Spawning</h2>
+    <p><strong>You must create a fictional nation to play as.</strong> You can't play as any real culture or people, but can be inspired by them, putting a spin on it. Your worldbuilding can be as creative as you want, but no sci-fi or fantasy.</p>
+    
+    <h3>Spawning Process</h3>
     <ol>
       <li>
-        Select a real-life region from the region map shown below, which corresponds to an alternate location in the game’s alternate earth map.
+        <strong>Select a real life region</strong> from the region map shown below, which corresponds to an alternate location in the game's alternate earth map.
         <figure>
           <img src="assets/images/map.png" alt="Region Map">
           <figcaption>Alternate Earth Region Map</figcaption>
         </figure>
       </li>
-      <li>React to get a role for that region. You can only pick one region.</li>
-      <li>Create a spawning ticket in the tickets channel.</li>
-      <li>List the following details:<ul>
-        <li><strong>Username</strong></li>
-        <li><strong>Nation name</strong></li>
-        <li><strong>Lifestyle</strong></li>
-        <li><strong>Capital (fictional)</strong></li>
-        <li>A map showing your capital, one more settlement, and five tiles (including your settlements), which must be contiguous by land, or reachable by a sea tile.</li>
-      </ul></li>
+      <li><strong>React to get a role</strong> for that region in (). You can only pick one region.</li>
+      <li><strong>Create a spawning ticket</strong> in ()</li>
+      <li><strong>List the following details:</strong>
+        <ul>
+          <li>Username</li>
+          <li>Nation name</li>
+          <li>Lifestyle</li>
+          <li>Capital (fictional)</li>
+          <li>A map showing your capital, 1 more settlement, and 5 tiles (including your settlements), which must be contiguous by land, or no further than a neighboring sea tile by sea.</li>
+        </ul>
+      </li>
+      <li><strong>Confirmation:</strong> The spawning mod will confirm your spawn, and send you a map showing your final spawn. You may change your capital or lifestyle to fit your map location, and can select a new tile if your selected tile isn't available on the map.</li>
     </ol>
-    <p>The spawning mod will confirm your spawn and send you a map showing your final spawn. You may adjust your capital or lifestyle to fit your map location, and select a new tile if your chosen tile isn’t available.</p>
-  <section>
-    <h2>Sample Spawn</h2>
-    <figure>
-      <img src="assets/images/sample spawn.png" alt="Sample Spawn Example">
-      <figcaption>Atlantis Spawning Example</figcaption>
-    </figure>
-  </section>
+
+    <section>
+      <h3>Lifestyle Options</h3>
+      <p>You must choose 1 lifestyle at spawn, which will give you specific bonuses:</p>
+      
+      <div class="lifestyle-grid">
+        <div class="lifestyle-card">
+          <h4>Farmer</h4>
+          <p><em>Settled crops and livestock farmers of the world.</em></p>
+          <ul>
+            <li>Produce 1 food per tile (× tile modifier)</li>
+            <li>Start off with 1 crop of your design</li>
+            <li>Can expand into herder and gatherer land without declaring war</li>
+          </ul>
+        </div>
+        
+        <div class="lifestyle-card">
+          <h4>Gatherer</h4>
+          <p><em>Hunter, forager, and fishermen of the world.</em></p>
+          <ul>
+            <li>Produce ½ food per tile (× tile modifier)</li>
+            <li>May select 1 native terrain (excluding open sea/impassable terrain), and gain 1 food per tile in that terrain (1.5 food per tile total)</li>
+            <li>Will produce food from every tile type, regardless of domestic lifeforms</li>
+            <li>When exploring, if you discover a plant or animal, gain 3 food. If hostile, must roleplay to defeat it</li>
+          </ul>
+        </div>
+        
+        <div class="lifestyle-card">
+          <h4>Herder</h4>
+          <p><em>Nomadic pastoralists of the world.</em></p>
+          <ul>
+            <li>Produce ⅓ food per tile (× tile modifier)</li>
+            <li>Start off with 1 livestock of your design</li>
+            <li>Expansion cost is 5 per grassland and desert tile (¼ normal cost)</li>
+            <li>Each settlement has 10 tile expansion range and 10 tile trade range</li>
+            <li>May convert each food to 1 mount</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h3>Sample Spawn</h3>
+      <figure>
+        <img src="assets/images/sample spawn.png" alt="Sample Spawn Example">
+        <figcaption>Atlantis Spawning Example</figcaption>
+      </figure>
+    </section>
   </main>
   <script src="assets/js/main.js"></script>
 </body>
