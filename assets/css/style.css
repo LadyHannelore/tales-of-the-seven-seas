@@ -545,7 +545,7 @@ ol, ul {
 
 .feature-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px var(--shadow-color), 0 0 15px rgba(184, 134, 11, 0.3);
+  box-shadow: 0 10px 25px var(--shadow-color), 0 0 15px rgba(184, 134, 11, 0.3);
   border-color: var(--gold-light);
 }
 
@@ -653,12 +653,9 @@ ol, ul {
   overflow: hidden;
 }
 
-.lifestyle-card:hover, .mechanic-card:hover, .tech-card:hover, .example-card:hover, .resource-card:hover, .nation-type-card:hover {
+.lifestyle-card:hover, .mechanic-card:hover, .tech-card:hover, .example-card:hover, .resource-card:hover, .route-type:hover, .nation-type-card:hover {
   transform: translateY(-5px);
-  box-shadow: 
-    0 10px 25px var(--shadow-color),
-    inset 0 1px 8px rgba(184, 134, 11, 0.3),
-    0 0 20px rgba(184, 134, 11, 0.3);
+  box-shadow: 0 10px 25px var(--shadow-color), 0 0 15px rgba(184, 134, 11, 0.3);
   border-color: var(--gold-light);
 }
 
@@ -757,69 +754,99 @@ figure img[src*="map"] {
 }
 
 body {
-  visibility: visible !important;
-  display: block !important;
-  background-color: #f4f1e8 !important; /* Fallback background */
+  visibility: visible;
+  display: block;
+  background-color: var(--parchment-light);
 }
 
 main {
-  background-color: #f9f6f0 !important; /* Fallback background */
-  visibility: visible !important;
-  display: block !important;
-  opacity: 1 !important;
+  background-color: var(--vellum);
+  visibility: visible;
+  display: block;
+  opacity: 1;
 }
 
 header {
-  visibility: visible !important;
-  display: block !important;
-  background-color: #8d4004 !important; /* Fallback background */
+  visibility: visible;
+  display: block;
+  background-color: var(--leather-brown);
 }
 
 nav {
-  visibility: visible !important;
-  display: block !important;
+  visibility: visible;
+  display: block;
 }
 
-/* Responsive Design */
+/* Animation Fallbacks */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none;
+    transition: none;
+  }
+}
+
+/* Consolidated Hover Effects */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px var(--shadow-color), 0 0 15px rgba(184, 134, 11, 0.3);
+  border-color: var(--gold-light);
+}
+
+/* Apply hover styles directly to relevant elements */
+.lifestyle-card, .mechanic-card, .tech-card, .example-card, .resource-card, .route-type, .nation-type-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lifestyle-card:hover, .mechanic-card:hover, .tech-card:hover, .example-card:hover, .resource-card:hover, .route-type:hover, .nation-type-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px var(--shadow-color), 0 0 15px rgba(184, 134, 11, 0.3);
+  border-color: var(--gold-light);
+}
+
+/* Group related styles */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin: 30px 0;
+}
+
+.cards .card {
+  background: var(--aged-paper);
+  border: 2px solid var(--gold-accent);
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 6px 15px var(--shadow-color);
+  position: relative;
+}
+
+.cards .card h4 {
+  color: var(--illuminated-red);
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+  font-family: 'Cinzel', serif;
+}
+
+/* Responsive Design Improvements */
 @media (max-width: 768px) {
   header h1 {
     font-size: 2.2rem;
     flex-direction: column;
     gap: 15px;
   }
-  
-  .header-logo {
-    width: 60px;
-    height: 60px;
-  }
-  
-  nav {
-    padding: 10px 0;
-  }
-  
+
   nav ul {
     flex-direction: column;
     align-items: center;
     gap: 6px;
-    padding: 0 10px;
   }
-  
-  nav a {
-    font-size: 0.8rem;
-    padding: 8px 10px;
-    min-width: 70px;
-  }
-  
+
   main {
     padding: 20px;
-  }
-  
-  .key-features {
-    grid-template-columns: 1fr;
-  }
-  
-  .tutorial-grid {
-    grid-template-columns: 1fr;
   }
 }
 
@@ -828,35 +855,14 @@ nav {
     font-size: 1.8rem;
     gap: 10px;
   }
-  
-  .header-logo {
-    width: 50px;
-    height: 50px;
-  }
-  
+
   nav ul {
     grid-template-columns: repeat(3, 1fr);
     display: grid;
     gap: 8px;
   }
-  
-  nav a {
-    font-size: 0.75rem;
-    padding: 6px 8px;
-    min-width: auto;
-  }
-  
+
   main {
     padding: 15px;
-  }
-  
-  h2 {
-    font-size: 2rem;
-    padding: 15px 10px;
-  }
-  
-  h3 {
-    font-size: 1.4rem;
-    padding: 10px 15px 10px 45px;
   }
 }
