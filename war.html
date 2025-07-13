@@ -29,219 +29,292 @@
     </nav>
   </header>
   <main>
-    <h2>War System</h2>
-    <p>Ready to fight some wars? You may declare war against 1 nation to capture land, cities, loot (check siege section), or gain diplomatic favors.</p>
+    <div class="page-hero">
+      <h2>War System</h2>
+      <p>Master the art of conflict and conquest in Tales of the Seven Seas</p>
+    </div>
 
     <section>
-      <h3>War Declaration</h3>
-      <p>To declare a war you must select 1 of 4 casus belli, which will determine your victory requirement, and your victory and defeat conditions. When a victory requirement is met, a war ends with the victor gaining the victory condition. If the victory requirement is not met, the opponent will gain the defeat condition.</p>
+      <h3>Casus Belli (War Types)</h3>
+      <p>To declare war, you must select one of four casus belli, which determines your victory requirements and conditions. Create a war ticket, mention your opponent, and declare your intentions.</p>
       
-      <p>After selecting a casus belli, create a war ticket, mention your opponent, and create your war declaration message.</p>
-      
-      <h4>Casus Belli List</h4>
       <div class="casus-belli-grid">
         <div class="casus-card">
-          <h5>Skirmish</h5>
-          <p><strong>Declaration:</strong> Declare 1-20 tiles on the map to capture</p>
-          <p><strong>Victory requirement:</strong> Hold all these tiles by the end of the 4th turn, or opponent surrenders</p>
-          <p><strong>Victory condition:</strong> Capture 1-20 tiles per declaration</p>
-          <p><strong>Defeat condition:</strong> Opponent may demand 1-20 tiles on the map which they hold by the end of the 4th turn</p>
+          <h4>Skirmish</h4>
+          <p><strong>Declaration:</strong> Declare 1-20 tiles to capture</p>
+          <p><strong>Victory Requirement:</strong> Hold >50% of declared tiles by end of Turn 4 OR opponent surrenders</p>
+          <p><strong>Victory:</strong> Capture declared tiles + 1 loot per 3 tiles held</p>
+          <p><strong>Defeat:</strong> Opponent may demand 50% of undeclared tiles they hold</p>
         </div>
         
         <div class="casus-card">
-          <h5>Conquest</h5>
-          <p><strong>Declaration:</strong> Declare 1-3 settlements on the map to capture (excluding capital, unless it's their only city)</p>
-          <p><strong>Victory requirement:</strong> Capture 1-5 settlements within 6 turns, or opponent surrenders</p>
-          <p><strong>Victory condition:</strong> Gain 1-5 settlements per declaration + 3 tiles per settlement (must not left opponent with tiles outside their expansion range, unless necessary)</p>
-          <p><strong>Defeat condition:</strong> Lost 1-5 settlements which the opponent manage to hold by the end of the 6th turn + 3 tiles per settlement</p>
+          <h4>Conquest</h4>
+          <p><strong>Declaration:</strong> Declare 1-3 settlements to capture (no capitals unless only city)</p>
+          <p><strong>Victory Requirement:</strong> Capture settlements within 6 turns</p>
+          <p><strong>Victory:</strong> Gain settlements + 3 tiles/settlement (must maintain territorial contiguity)</p>
+          <p><strong>Defeat:</strong> Lose settlements + opponent may relocate orphaned tiles</p>
         </div>
         
         <div class="casus-card">
-          <h5>Raid</h5>
-          <p><strong>Declaration:</strong> Capture 1-15 loot</p>
-          <p><strong>Victory requirement:</strong> Capture 1-15 loot within 4 turns, or opponent surrenders</p>
-          <p><strong>Victory condition:</strong> 1-15 loot</p>
-          <p><strong>Defeat condition:</strong> Opponent gain 1-15 loot they manage to capture by the end of the 4th turn</p>
+          <h4>Raid</h4>
+          <p><strong>Declaration:</strong> Declare loot target (1-15)</p>
+          <p><strong>Victory Requirement:</strong> Generate loot through battles/sieges within 4 turns</p>
+          <p><strong>Victory:</strong> Gain declared loot</p>
+          <p><strong>Defeat:</strong> Pay opponent 1/2 declared loot value</p>
         </div>
         
         <div class="casus-card">
-          <h5>Subjugation</h5>
-          <p><strong>Declaration:</strong> Subjugate the opponent to follow certain conditions (vassalization, culture conversion, stop doing roleplay offensive to your nation, others as approved by mod)</p>
-          <p><strong>Victory requirement:</strong> Capture opponent's capital within 6 turns</p>
-          <p><strong>Victory condition:</strong> Subjugate the opponent to follow the declaration condition + 1 settlement/1-6 tiles/1-3 loot</p>
-          <p><strong>Defeat condition:</strong> Opponent may demand 1 settlement (within expansion range), 1-6 tiles, 1-3 loot, or other favors as reparations (approved by mod), or subjugate the opponent if their capital is captured within 6 turns</p>
+          <h4>Subjugation</h4>
+          <p><strong>Declaration:</strong> State conditions (vassalization, cultural change, etc.)</p>
+          <p><strong>Victory Requirement:</strong> Capture capital OR hold 50% settlements for 2 turns</p>
+          <p><strong>Victory:</strong> Enforce conditions + 1 settlement/3 tiles/2 loot</p>
+          <p><strong>Defeat:</strong> Opponent may demand 1 settlement OR 3 tiles OR 2 loot</p>
         </div>
-      </div>
-      
-      <div class="war-restrictions">
-        <h4>War Restrictions</h4>
-        <ul>
-          <li>You may only declare 1 war at a time</li>
-          <li>After you finish a war, you will not be able to declare on the same opponent for 2 weeks, but the opponent can declare on you</li>
-          <li>Players will be automatically protected 2 weeks after spawning</li>
-          <li>Players may refuse a full annexation, or a war declaration if they are already in a war</li>
-        </ul>
       </div>
     </section>
 
     <section>
       <h3>Army System</h3>
-      <p>Armies will let you conquer cities, raid, and protect your land. You may create an army with 1 labor, which will stop the labor from regenerating until the war ends.</p>
       
-      <p>At the beginning of a war, both sides may distribute their armies around their settlements however they like, at a maximum equal to that settlement's population (1 for town, 3 for cities, 5 for metropolis).</p>
+      <div class="army-overview">
+        <h4>Army Creation & Costs</h4>
+        <p><strong>Creation Cost:</strong> 1 Labor (halts regeneration only during active battle turns)</p>
+        <p><strong>Maintenance:</strong> After Turn 3, costs 1 Food/army/turn</p>
+        
+        <h4>Settlement Limits</h4>
+        <ul>
+          <li><strong>Town:</strong> 1 army</li>
+          <li><strong>City:</strong> 3 armies</li>
+          <li><strong>Metropolis:</strong> 5 armies</li>
+        </ul>
+      </div>
       
-      <h4>Army Composition</h4>
-      <p>Each army consist of individual <strong>units</strong> you may use in battle or maneuver across the battlefield. 1 army automatically start with 5 infantry units and 1 commander unit. The player may purchase 2 more modifications per army at the following cost, adding those units to your army. You may purchase these modifications at any time during the war.</p>
-      
-      <div class="army-units">
-        <div class="unit-cost">
-          <span class="cost">1 bronze:</span> 3 shock unit
-        </div>
-        <div class="unit-cost">
-          <span class="cost">1 timber:</span> 3 archer unit
-        </div>
-        <div class="unit-cost">
-          <span class="cost">1 mount:</span> 4 cavalry unit
-        </div>
-        <div class="unit-cost">
-          <span class="cost">1 mount:</span> 2 chariot unit
-        </div>
+      <div class="unit-costs">
+        <h4>Unit Costs (Pre-war purchases only)</h4>
+        <table class="unit-table">
+          <thead>
+            <tr>
+              <th>Unit</th>
+              <th>Cost</th>
+              <th>Stats (Atk/Def/Move)</th>
+              <th>Special</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Infantry</td>
+              <td>Base</td>
+              <td>1/-/1</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>Shock</td>
+              <td>1 Bronze</td>
+              <td>1/Immune*/1</td>
+              <td>*Vulnerable to cavalry flanking & archers</td>
+            </tr>
+            <tr>
+              <td>Archer</td>
+              <td>1 Timber</td>
+              <td>1/-/1</td>
+              <td>Range 2</td>
+            </tr>
+            <tr>
+              <td>Cavalry</td>
+              <td>1 Mount</td>
+              <td>1/-/3</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>Light Chariot</td>
+              <td>1 Mount</td>
+              <td>1/Immune**/3</td>
+              <td>**Vulnerable to side/rear attacks</td>
+            </tr>
+            <tr>
+              <td>Heavy Chariot</td>
+              <td>1 Mount</td>
+              <td>1/Immune***/2</td>
+              <td>***Takes 3+ hits to kill</td>
+            </tr>
+            <tr>
+              <td>Commander</td>
+              <td>Auto-incl</td>
+              <td>1/Immune****/1</td>
+              <td>****Death causes -1 movement to all units</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
 
     <section>
       <h3>Maneuvering</h3>
-      <p>Each war is divided into turns, one turn lasting 1-3 days. For each turn, you may choose to:</p>
-      <ul>
-        <li><strong>Maneuver:</strong> Move each army 3 tiles by land (or water after unlocking shipbuilding). If the army move outside of their nation's expansion range (3 tiles around each settlement), they must pay 1 food per 3 tile movement, or 1 mount for 6 tile movement. 2 armies may occupy the same tile</li>
-        <li><strong>Battle</strong></li>
-        <li><strong>Do nothing</strong></li>
-      </ul>
       
       <div class="maneuver-rules">
-        <h4>Maneuver Rules</h4>
+        <h4>Movement Rules</h4>
+        <p><strong>Movement:</strong> 3 tiles/turn (land/water)</p>
+        <p><strong>Foreign Territory:</strong> Always costs 1 Food or 1 Mount per army (even if approved)</p>
+        <p><strong>Stacking Limit:</strong> Max 3 armies/tile (-1 move/combat per excess army)</p>
+        
+        <h4>Inactivity Penalties</h4>
         <ul>
-          <li>If both players choose to do nothing for 2 turns, the war will end</li>
-          <li>If a player does not respond in their turn after 3 days, they are considered as doing nothing unless specified later</li>
-          <li>If an army maneuvers through foreign territory, that player may choose to approve of the maneuver, start a war with the maneuvering army, or fund the maneuvering army by trading them goods</li>
-          <li>They may not join the war themselves against the same target</li>
-          <li>If the nation approves, your maneuvering will not count as being beyond expansion range and thus does not need extra food</li>
+          <li><strong>1 missed turn:</strong> Opponent gains +1 movement</li>
+          <li><strong>2 missed turns:</strong> Auto-loss of skirmishes/raids</li>
         </ul>
       </div>
     </section>
 
     <section>
-      <h3>Battle System</h3>
-      <p>When 2 or more armies occupy the same tile, any of them may decide to start a battle. This is done using a board game, war chess, where each unit will move on a 9×9 board to eliminate all enemy units on the board.</p>
+      <h3>Battle System: War Chess</h3>
       
-      <h4>Unit Types</h4>
-      <p>Each unit has the following property in war chess: Attack, Defense, and movement.</p>
-      
-      <div class="unit-types">
-        <div class="unit-card">
-          <h5>Infantry</h5>
-          <p><strong>Attack:</strong> Automatically attack 1 tile in front</p>
-          <p><strong>Defense:</strong> None</p>
-          <p><strong>Movement:</strong> 1 tile in any directions</p>
-        </div>
-        
-        <div class="unit-card">
-          <h5>Shock</h5>
-          <p><strong>Attack:</strong> Automatically attack 1 tile in front</p>
-          <p><strong>Defense:</strong> Immune to attacks single from infantry, cavalry, and commander, may be killed by multiple attacks from infantry, cavalry, and commander. Can be injured but cannot die from injury</p>
-          <p><strong>Movement:</strong> 1 tile in any directions</p>
-        </div>
-        
-        <div class="unit-card">
-          <h5>Archer</h5>
-          <p><strong>Attack:</strong> May select "fire arrow" action, and select any target within a 3 tile firing range. When firing at a target, they will be injured. An injured target will have a slightly weaker defense than their regular counterparts</p>
-          <p><strong>Defense:</strong> None</p>
-          <p><strong>Movement:</strong> 1 tile in 4 cardinal directions</p>
-        </div>
-        
-        <div class="unit-card">
-          <h5>Commander</h5>
-          <p><em>Must have 1 per color</em></p>
-          <p><strong>Attack:</strong> Automatically attack 1 tile in front</p>
-          <p><strong>Defense:</strong> Immune to a single attacks by infantry and cavalry. May die from multiple attacks by infantry and cavalry, or from 1 shock. Immune to injury</p>
-          <p><strong>Movement:</strong> 1 tile in any directions</p>
-        </div>
-        
-        <div class="unit-card">
-          <h5>Cavalry</h5>
-          <p><strong>Attack:</strong> Automatically attack 1 tile in front</p>
-          <p><strong>Defense:</strong> None</p>
-          <p><strong>Movement:</strong> 3 tiles in any directions</p>
-        </div>
-        
-        <div class="unit-card">
-          <h5>Light Chariot</h5>
-          <p><em>Chariot with infantry or archer rider</em></p>
-          <p><strong>Attack:</strong> Automatically attack 1 tile in front + fire arrow for archer rider</p>
-          <p><strong>Defense:</strong> Immune to single attacks from infantry, cavalry, commander. May die from multiple attacks. Immune to shock attack in front. May die from shock attack from the side or back</p>
-          <p><strong>Movement:</strong> 3 tiles in 4 directions</p>
-        </div>
-        
-        <div class="unit-card">
-          <h5>Heavy Chariot</h5>
-          <p><em>Chariot with shock or commander rider</em></p>
-          <p><strong>Attack:</strong> Automatically attack 1 tile in front</p>
-          <p><strong>Defense:</strong> Immune to 1-2 attacks from infantry, cavalry, commander. May die from 3 or more attacks. Immune to 1 shock attack. May die from 2 or more shock attacks</p>
-        </div>
-      </div>
-      
-      <h4>Battle Phases</h4>
-      <p>War chess is divided into 3 phases, placement, battle, and rally phase. The aggressor will be red, and the defender will be blue.</p>
-      
-      <div class="battle-phases">
-        <div class="phase-card">
-          <h5>Placement Phase</h5>
-          <p>Starting with red, the player may place their unit anywhere on the 5×2 area on their side of the board. Then the blue player will get their turn.</p>
-          <p>If you have more than 1 army within the tile, you may place all army's unit on the battlefield, but with only 1 commander. When placing a chariot unit, each chariot must have 1 rider unit being either infantry, archer, shock, or commander. Infantry unit serve as a default rider for the chariot and will not subtract from your infantry unit.</p>
-        </div>
-        
-        <div class="phase-card">
-          <h5>Battle Phase</h5>
-          <p>Red player gets their turn first. Each turn, you may do 1 of 4 action per unit:</p>
-          <ul>
-            <li>Move the unit</li>
-            <li>Turn the unit to face any 4 directions</li>
-            <li>Attack: for archers only</li>
-            <li>Nothing</li>
-          </ul>
-          <p>After you have moved all units, you may end your turn. Your movement cannot be canceled. Then, the death of each side's unit will be calculated.</p>
-        </div>
-        
-        <div class="phase-card">
-          <h5>Rally Phase</h5>
-          <p>At the end of a battle, each side will calculate the remaining units in their army:</p>
-          <p><strong>Remaining units = Surviving units + Retreated units (your own) + captured units (from the opponent)</strong></p>
-          <p>If your remaining units no longer have a commander, it will be added to 1 army of your choice. Your remaining units will constitute your army, which you may continue to use to fight the war.</p>
-        </div>
-      </div>
-      
-      <h4>Siege</h4>
-      <p>Sieges constitute a special kind of battle, centered around settlements. When opposing armies are on a settlement tile, they may declare a siege. The siege will be fought with all armies in the settlement tile, including those who never left the settlement. If the settlement is unguarded, it is automatically captured.</p>
-      
-      <p>In a siege, your army may be placed anywhere on the 4×9 area on your side of the board.</p>
-      
-      <p>If a commander is no longer from the board, the opponent automatically conquers the settlement. If they do, they will gain 1 loot per town, 4 per city, and 9 per metropolis. Each loot represents goods you can demand from your opponent.</p>
-      
-      <div class="loot-values">
-        <h5>Loot Values</h5>
-        <p>1 loot can be demanded for:</p>
+      <div class="battle-system">
+        <h4>Deployment</h4>
         <ul>
-          <li>1 labor</li>
-          <li>30 coins</li>
-          <li>2 resources of your choice</li>
+          <li>Max 12 units/battle (reinforcements arrive Turn 3)</li>
+          <li>Grid: 9×9 (attacker: rows 1-2, defender: rows 8-9)</li>
         </ul>
-        <p>The goods you selected must be owned by the opposing nation.</p>
+        
+        <h4>Combat Rules</h4>
+        <ul>
+          <li><strong>Archers:</strong> Must be stationary to fire (2-tile range)</li>
+          <li><strong>Cavalry:</strong> Flanking bonus vs Shock units</li>
+          <li><strong>Commanders:</strong> Death causes -1 movement to all units</li>
+          <li><strong>Chariots:</strong> Require rider unit (infantry default)</li>
+        </ul>
+        
+        <h4>Battle Phases</h4>
+        <ol>
+          <li><strong>Placement</strong> (Red → Blue)</li>
+          <li><strong>Combat</strong> (Alternating turns): Move/Turn/Attack (Archers only)</li>
+          <li><strong>Rally:</strong> Merge surviving units into new army</li>
+        </ol>
       </div>
     </section>
+
+    <section>
+      <h3>Sieges</h3>
+      
+      <div class="siege-rules">
+        <h4>Capture Requirements</h4>
+        <ul>
+          <li>Army must occupy settlement for 1 full turn</li>
+          <li>Must eliminate all defenders OR kill commander</li>
+        </ul>
+        
+        <h4>Loot Values</h4>
+        <table class="loot-table">
+          <thead>
+            <tr>
+              <th>Settlement</th>
+              <th>Loot</th>
+              <th>Equivalent Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Town</td>
+              <td>1</td>
+              <td>15 coins OR 1 labor OR 1 common resource*</td>
+            </tr>
+            <tr>
+              <td>City</td>
+              <td>4</td>
+              <td>60 coins OR 4 labor OR 4 common resources</td>
+            </tr>
+            <tr>
+              <td>Metropolis</td>
+              <td>9</td>
+              <td>135 coins OR 9 labor OR 9 common resources</td>
+            </tr>
+          </tbody>
+        </table>
+        <p><small>*Common resources: Grain, Timber, Stone (no strategic resources)</small></p>
+      </div>
+    </section>
+
+    <section>
+      <h3>New War Mechanics</h3>
+      
+      <div class="new-mechanics-grid">
+        <div class="mechanic-card">
+          <h4>Supply Lines</h4>
+          <p>Armies beyond expansion range 2+ turns: Lose 1 random unit/turn</p>
+        </div>
+        
+        <div class="mechanic-card">
+          <h4>War Weariness</h4>
+          <p><strong>After Turn 4:</strong> +1 Food maintenance/army/turn</p>
+          <p><strong>After Turn 6:</strong> -1 Combat Strength to all units</p>
+        </div>
+        
+        <div class="mechanic-card">
+          <h4>Diplomatic Penalties</h4>
+          <p>Aggressor loses 1 Diplomatic Favor per war declaration</p>
+        </div>
+        
+        <div class="mechanic-card">
+          <h4>Scouting</h4>
+          <p><strong>1 free Scout unit per army:</strong></p>
+          <ul>
+            <li>Movement: 5 tiles</li>
+            <li>Reveals enemy positions in adjacent tiles</li>
+            <li>Cannot attack/be attacked</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h3>War Restrictions (Updated)</h3>
+      
+      <div class="restrictions">
+        <ul>
+          <li>Max 1 active war/nation</li>
+          <li>14-day cooldown after war with same opponent</li>
+          <li>New players: 14-day protection after spawn</li>
+        </ul>
+        
+        <h4>Players may refuse:</h4>
+        <ul>
+          <li>Wars during existing conflicts</li>
+          <li>Full annexation demands</li>
+          <li>Subjugation violating core RP values</li>
+        </ul>
+        
+        <h4>Surrender Terms:</h4>
+        <ul>
+          <li>Maximum demands capped at 200% war cost</li>
+          <li>Moderator approval required for asymmetric terms</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h3>Example War Flow</h3>
+      
+      <div class="example-flow">
+        <h4>Conquest Example</h4>
+        <ol>
+          <li><strong>Declare Conquest</strong> (3 cities) → Pay 1 Labor to raise army</li>
+          <li><strong>Maneuver cavalry</strong> (3 tiles/turn) → Pay 1 Mount for foreign movement</li>
+          <li><strong>Siege city</strong> (12-unit limit battle):
+            <ul>
+              <li>Turn 1: Archers fire from stationary positions</li>
+              <li>Turn 2: Cavalry flank shock units</li>
+              <li>Turn 3: Reinforcements arrive</li>
+            </ul>
+          </li>
+          <li><strong>After capture:</strong>
+            <ul>
+              <li>Gain city + 3 tiles (ensuring contiguity)</li>
+              <li>Claim 4 loot → Convert to 60 coins</li>
+            </ul>
+          </li>
+          <li><strong>Post-war:</strong> 14-day cooldown, pay 1 Diplomatic Favor</li>
+        </ol>
+    </section>
   </main>
-  <footer>
-    <p>&copy; 2025 Tales of the Seven Seas. All rights reserved.</p>
-  </footer>
   <script src="assets/js/main.js"></script>
 </body>
 </html>

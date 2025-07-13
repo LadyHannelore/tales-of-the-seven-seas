@@ -576,6 +576,358 @@ nav a.active::before {
   50% { transform: translateY(-2px); }
 }
 
+/* Enhanced Card Styling */
+.lifestyle-card, .mechanic-card, .tech-card, .example-card, .resource-card, .route-type, .nation-type-card {
+  background: var(--card-bg);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.lifestyle-card::before, .mechanic-card::before, .tech-card::before, .example-card::before, .resource-card::before, .nation-type-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+  border-radius: 12px;
+  padding: 2px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.lifestyle-card:hover::before, .mechanic-card:hover::before, .tech-card:hover::before, .example-card:hover::before, .resource-card:hover::before, .nation-type-card:hover::before {
+  opacity: 1;
+}
+
+.lifestyle-card:hover, .mechanic-card:hover, .tech-card:hover, .example-card:hover, .resource-card:hover, .nation-type-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  border-color: transparent;
+}
+
+.lifestyle-card h4, .mechanic-card h4, .tech-card h5, .example-card h4, .resource-card h4, .nation-type-card h4 {
+  color: var(--primary-color);
+  margin-bottom: 12px;
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 8px;
+  font-weight: 700;
+  position: relative;
+}
+
+.lifestyle-card h4::after, .mechanic-card h4::after, .tech-card h5::after, .example-card h4::after, .resource-card h4::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background: var(--secondary-color);
+  border-radius: 1px;
+}
+
+/* Navigation Icons */
+nav a[href="index.html"]::before { content: '🏠'; }
+nav a[href="spawning.html"]::before { content: '🏗️'; }
+nav a[href="basic-mechanics.html"]::before { content: '⚙️'; }
+nav a[href="nation-types.html"]::before { content: '👥'; }
+nav a[href="migration.html"]::before { content: '🚶'; }
+nav a[href="map.html"]::before { content: '🗺️'; }
+nav a[href="terrain.html"]::before { content: '🏔️'; }
+nav a[href="exploration.html"]::before { content: '🧭'; }
+nav a[href="worldbuilding.html"]::before { content: '📚'; }
+nav a[href="land-resources.html"]::before { content: '🌾'; }
+nav a[href="culture-technology.html"]::before { content: '🔬'; }
+nav a[href="war.html"]::before { content: '⚔️'; }
+nav a[href="treaties.html"]::before { content: '📜'; }
+main {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+h2, h3 {
+  margin-bottom: 15px;
+  color: var(--primary-color);
+  position: relative;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 2.2rem;
+  text-align: center;
+  margin: 30px 0 25px 0;
+  padding-bottom: 15px;
+  border-bottom: 3px solid transparent;
+  background: linear-gradient(to right, var(--secondary-color), var(--accent-color)) padding-box,
+              linear-gradient(to right, var(--secondary-color), var(--accent-color)) border-box;
+  border-image: linear-gradient(to right, var(--secondary-color), var(--accent-color)) 1;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+h2::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -8px;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(to right, var(--secondary-color), var(--accent-color));
+  border-radius: 2px;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin: 25px 0 15px 0;
+  padding-left: 20px;
+  border-left: 4px solid var(--secondary-color);
+  background: linear-gradient(90deg, rgba(24, 188, 156, 0.1) 0%, transparent 100%);
+  padding: 10px 0 10px 20px;
+  border-radius: 0 8px 8px 0;
+  position: relative;
+}
+
+h3::before {
+  content: '▶';
+  position: absolute;
+  left: -2px;
+  color: var(--secondary-color);
+  font-size: 0.8em;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+h4 {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  margin: 15px 0 10px 0;
+  font-weight: 600;
+  position: relative;
+  padding-left: 15px;
+}
+
+h4::before {
+  content: '●';
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+  font-size: 0.8em;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+h5 {
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  margin: 12px 0 8px 0;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.95rem;
+}
+a { color: var(--link-color); transition: color 0.3s; }
+a:hover { color: var(--link-hover-color); }
+p, ol, ul, blockquote { margin-bottom: 15px; }
+ol, ul { padding-left: 20px; }
+figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+  border-left: 4px solid var(--secondary-color);
+  padding: 10px;
+}
+figure img {
+  display: block;
+  margin: 0 auto;
+  max-width: 90%;
+  width: auto;
+  height: auto;
+  border-radius: 4px;
+}
+figure figcaption {
+  margin-top: 8px;
+  font-size: 0.9em;
+  color: var(--secondary-color);
+}
+p.footer, footer { text-align: center; margin-top: 40px; color: #666; }
+/* Active link styling */
+nav a.active {
+  color: var(--primary-color) !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  box-shadow: 0 0 20px rgba(243, 156, 18, 0.4);
+  transform: scale(1.05);
+}
+
+nav a.active::before {
+  animation: bounce 1s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-2px); }
+}
+
+/* Medieval Table Styling */
+.unit-table, .loot-table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  margin: 20px 0 !important;
+  background: var(--aged-paper) !important;
+  border: 2px solid var(--gold-accent) !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+  box-shadow: 0 4px 10px var(--shadow-color) !important;
+}
+
+.unit-table th, .loot-table th {
+  background: linear-gradient(135deg, var(--gold-accent), var(--gold-light)) !important;
+  color: var(--parchment-light) !important;
+  padding: 15px 12px !important;
+  text-align: left !important;
+  font-family: 'Cinzel', serif !important;
+  font-weight: 700 !important;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5) !important;
+  border-bottom: 2px solid var(--ink-dark) !important;
+}
+
+.unit-table td, .loot-table td {
+  padding: 12px !important;
+  border-bottom: 1px solid var(--gold-accent) !important;
+  color: var(--ink-dark) !important;
+  font-family: 'Cinzel', serif !important;
+  vertical-align: top !important;
+}
+
+.unit-table tr:nth-child(even), .loot-table tr:nth-child(even) {
+  background: var(--parchment-medium) !important;
+}
+
+.unit-table tr:hover, .loot-table tr:hover {
+  background: var(--parchment-dark) !important;
+  transition: background 0.3s ease !important;
+}
+
+.unit-table td:first-child, .loot-table td:first-child {
+  font-weight: 600 !important;
+  color: var(--illuminated-red) !important;
+}
+
+/* Medieval Grid Layouts */
+.casus-belli-grid, .new-mechanics-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+  gap: 25px !important;
+  margin: 30px 0 !important;
+}
+
+.casus-card {
+  background: var(--aged-paper) !important;
+  border: 2px solid var(--gold-accent) !important;
+  border-radius: 12px !important;
+  padding: 25px !important;
+  box-shadow: 
+    0 6px 15px var(--shadow-color),
+    inset 0 1px 3px rgba(184, 134, 11, 0.2) !important;
+  transition: all 0.4s ease !important;
+  position: relative !important;
+}
+
+.casus-card::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 8px !important;
+  left: 8px !important;
+  right: 8px !important;
+  bottom: 8px !important;
+  border: 1px solid var(--gold-accent) !important;
+  border-radius: 6px !important;
+  opacity: 0.5 !important;
+  pointer-events: none !important;
+}
+
+.casus-card:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 
+    0 10px 25px var(--shadow-color),
+    inset 0 1px 8px rgba(184, 134, 11, 0.3),
+    0 0 20px rgba(184, 134, 11, 0.3) !important;
+  border-color: var(--gold-light) !important;
+}
+
+.casus-card h4 {
+  color: var(--illuminated-red) !important;
+  margin-bottom: 15px !important;
+  font-size: 1.4rem !important;
+  text-align: center !important;
+  border-bottom: 2px solid var(--gold-accent) !important;
+  padding-bottom: 8px !important;
+}
+
+/* Medieval Sections */
+.army-overview, .maneuver-rules, .battle-system, .siege-rules, .restrictions, .example-flow {
+  background: var(--parchment-medium) !important;
+  border: 2px solid var(--gold-accent) !important;
+  border-radius: 10px !important;
+  padding: 25px !important;
+  margin: 20px 0 !important;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1) !important;
+}
+
+.unit-costs {
+  margin: 25px 0 !important;
+}
+
+.example-flow ol {
+  counter-reset: step-counter !important;
+  padding-left: 0 !important;
+}
+
+.example-flow ol li {
+  counter-increment: step-counter !important;
+  margin: 15px 0 !important;
+  padding: 15px 20px 15px 60px !important;
+  background: var(--aged-paper) !important;
+  border: 1px solid var(--gold-accent) !important;
+  border-radius: 8px !important;
+  position: relative !important;
+  list-style: none !important;
+}
+
+.example-flow ol li::before {
+  content: counter(step-counter) !important;
+  position: absolute !important;
+  left: 20px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  background: var(--gold-accent) !important;
+  color: var(--parchment-light) !important;
+  width: 30px !important;
+  height: 30px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-weight: bold !important;
+  font-family: 'Cinzel', serif !important;
+}
+
 /* Medieval Page Design Overrides */
 main {
   width: 90%;
