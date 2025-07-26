@@ -1,6 +1,14 @@
 /* Custom Bootstrap overrides for Tales of the Seven Seas */
 /* Gold theme and visual enhancements */
 :root {
+  --wax-seal: url('https://upload.wikimedia.org/wikipedia/commons/6/6b/Wax-seal.png');
+  --sparkle: url('https://www.transparenttextures.com/patterns/stardust.png');
+  --heading-font: 'UnifrakturCook', 'Cinzel Decorative', serif;
+  --heading-shadow: 0 2px 12px #FFD700cc, 0 1px 0 #fff8e1, 0 0px 2px #0008;
+  --heading-underline: linear-gradient(90deg, #FFD700 60%, #fff8e1 100%);
+  --medieval-font: 'UnifrakturCook', 'Cinzel Decorative', 'IM Fell English SC', serif;
+  --parchment-bg: url('https://www.transparenttextures.com/patterns/old-mathematics.png');
+  --medieval-border: repeating-linear-gradient(90deg, #FFD700, #FFD700 4px, transparent 4px, transparent 8px);
   --bs-primary: #FFD700; /* Gold */
   --bs-secondary: #1a1a1a;
   --bs-body-bg: #181818;
@@ -12,24 +20,197 @@
 }
 
 body {
-  background: linear-gradient(135deg, #181818 0%, #232323 100%);
+/* Illuminated paragraph initials */
+p::first-letter {
+  font-size: 1.7em;
+  color: #FFD700;
+  font-family: 'IM Fell English SC', serif;
+  background: linear-gradient(120deg, #FFD700 60%, #fff8e1 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 8px #FFD70099, 0 1px 0 #fff8e1;
+  margin-right: 0.12em;
+  float: left;
+  line-height: 1;
+  filter: drop-shadow(0 0 4px #FFD70088);
+}
+
+/* Scroll effect for sections */
+section {
+  background: var(--parchment-bg), var(--sparkle), rgba(255, 248, 225, 0.92);
+  border-radius: 2.5rem 2.5rem 2.5rem 2.5rem/1.5rem 1.5rem 2.5rem 2.5rem;
+  border-width: 4px;
+  box-shadow: 0 8px 48px 0 #FFD70022, 0 4px 24px rgba(255,215,0,0.10), 0 0 0 8px #fff8e122 inset;
+  position: relative;
+  overflow: hidden;
+}
+section::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  background: var(--sparkle);
+  opacity: 0.18;
+  z-index: 0;
+}
+section > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Subtle gold sparkles on body */
+body::after {
+  content: '';
+  position: fixed;
+  left: 0; top: 0; width: 100vw; height: 100vh;
+  pointer-events: none;
+  background: var(--sparkle);
+  opacity: 0.10;
+  z-index: 9999;
+}
+
+/* Wax seal effect for footer */
+footer::after {
+  content: '';
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 0 auto -32px auto;
+  background: var(--wax-seal) center/contain no-repeat;
+  filter: drop-shadow(0 2px 8px #FFD70088);
+  opacity: 0.85;
+}
+/* Medieval illuminated drop caps for all headings */
+h1::first-letter, .display-1::first-letter,
+h2::first-letter, .display-2::first-letter,
+h3::first-letter, .display-3::first-letter,
+h4::first-letter, .display-4::first-letter {
+  font-size: 2.2em;
+  color: #FFD700;
+  background: linear-gradient(120deg, #FFD700 60%, #fff8e1 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 12px #FFD700cc, 0 2px 8px #fff8e1, 0 0 2px #0008;
+  float: left;
+  margin-right: 0.15em;
+  font-family: 'Cinzel Decorative', serif;
+  line-height: 1;
+  padding: 0 0.05em;
+  filter: drop-shadow(0 0 6px #FFD70088);
+}
+
+/* Ornate border for h1 */
+h1, .display-1 {
+  border-bottom: 6px double #FFD700;
+  border-image: var(--medieval-border) 8 repeat;
+  padding-bottom: 0.25em;
+  margin-bottom: 1.5rem;
+}
+
+/* Medieval divider for hr */
+hr {
+  border: none;
+  height: 12px;
+  background: url('https://www.transparenttextures.com/patterns/arabesque.png'), var(--medieval-border);
+  background-size: auto 12px, 100% 12px;
+  background-repeat: repeat-x;
+  margin: 2.5rem 0;
+  opacity: 0.7;
+  border-radius: 6px;
+}
+
+/* Ornate medieval headings */
+h1, .display-1 {
+  font-family: var(--heading-font);
+  font-size: 3rem;
+  background: var(--gold-gradient-animated);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  text-shadow: var(--heading-shadow);
+  letter-spacing: 2px;
+  margin-bottom: 1.2rem;
+  position: relative;
+}
+h1::first-letter, .display-1::first-letter {
+  font-size: 4.2rem;
+  color: #FFD700;
+  text-shadow: 0 0 12px #FFD700cc, 0 2px 8px #fff8e1;
+  float: left;
+  margin-right: 0.15em;
+  font-family: 'Cinzel Decorative', serif;
+}
+h2, .display-2 {
+  font-family: var(--heading-font);
+  font-size: 2.2rem;
+  color: #FFD700;
+  text-shadow: var(--heading-shadow);
+  letter-spacing: 1.5px;
+  margin-bottom: 1rem;
+  position: relative;
+}
+h2::after, .display-2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 5px;
+  margin-top: 0.4em;
+  background: var(--heading-underline);
+  border-radius: 2px;
+  margin-left: 0;
+}
+h3, .display-3 {
+  font-family: var(--heading-font);
+  font-size: 1.5rem;
+  color: #FFD700;
+  text-shadow: 0 1px 6px #FFD70099, 0 1px 0 #fff8e1;
+  letter-spacing: 1.2px;
+  margin-bottom: 0.7rem;
+  position: relative;
+}
+h3::after, .display-3::after {
+  content: '';
+  display: block;
+  width: 36px;
+  height: 3px;
+  margin-top: 0.3em;
+  background: var(--heading-underline);
+  border-radius: 2px;
+  margin-left: 0;
+}
+h4, .display-4 {
+  font-family: var(--heading-font);
+  font-size: 1.15rem;
+  color: #FFD700;
+  text-shadow: 0 1px 4px #FFD70088, 0 1px 0 #fff8e1;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+  background: var(--parchment-bg), linear-gradient(135deg, #181818 0%, #232323 100%);
   color: var(--bs-body-color);
   min-height: 100vh;
+  font-family: var(--medieval-font);
 }
 
 .header-logo {
-  max-height: 60px;
-  margin-right: 1rem;
+  max-height: 70px;
+  margin-right: 1.2rem;
   border-radius: 0.5rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  border: 3px solid #FFD700;
 }
 
 header {
-  background: rgba(24,24,24,0.95);
+  background: rgba(24,24,24,0.97);
   border-radius: 1.5rem 1.5rem 0.5rem 0.5rem;
   box-shadow: 0 4px 32px 0 #FFD70022, 0 2px 12px rgba(0,0,0,0.12);
   margin-bottom: 1.5rem;
   padding: 1.5rem 1rem 1rem 1rem;
+  border-bottom: 6px solid #FFD700;
+  border-image: var(--medieval-border) 8 repeat;
 }
 
 .nav {
@@ -43,16 +224,29 @@ header {
   padding: 0.5rem 1.5rem;
   position: relative;
   z-index: 10;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
 .nav-link {
   position: relative;
   padding-bottom: 0.25rem;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.5px;
+  padding-left: 1.1rem;
+  padding-right: 1.1rem;
+  font-family: var(--medieval-font);
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-shadow: 0 1px 0 #fff8e1, 0 2px 2px #0006;
+  border: 2.5px solid transparent;
+  border-image: var(--medieval-border) 8 repeat;
+  border-bottom: none;
+  border-top: none;
   transition: color 0.2s, text-shadow 0.2s;
   border-radius: 0.5rem;
+  display: inline-block;
 }
 .nav-link.active, .nav-link:hover {
   color: #FFD700 !important;
@@ -75,13 +269,15 @@ header {
 .cta-primary {
   background: var(--bs-primary);
   color: #1a1a1a;
-  border: none;
+  border: 2.5px solid #FFD700;
+  font-family: var(--medieval-font);
   font-weight: bold;
   border-radius: 2rem;
-  box-shadow: 0 2px 8px rgba(255,215,0,0.15);
+  box-shadow: 0 2px 8px rgba(255,215,0,0.18);
   transition: background 0.2s, color 0.2s, box-shadow 0.2s, box-shadow 0.3s;
   position: relative;
   overflow: hidden;
+  letter-spacing: 1.2px;
 }
 .cta-primary::after {
   content: '';
@@ -111,11 +307,12 @@ header {
 .cta-secondary {
   background: transparent;
   color: var(--bs-primary);
-  border: 2px solid var(--bs-primary);
+  border: 2.5px solid #FFD700;
+  font-family: var(--medieval-font);
   font-weight: bold;
   border-radius: 2rem;
   transition: background 0.2s, color 0.2s, box-shadow 0.2s;
-  letter-spacing: 0.5px;
+  letter-spacing: 1.2px;
 }
 .cta-secondary:hover {
   background: var(--bs-primary);
@@ -133,7 +330,9 @@ header {
   box-shadow: 0 8px 48px 0 #FFD70022, 0 4px 24px rgba(255,215,0,0.10);
   position: relative;
   overflow: hidden;
-  border: 2px solid #FFD70033;
+  border: 3.5px double #FFD700;
+  border-image: var(--medieval-border) 8 repeat;
+  font-family: var(--medieval-font);
 }
 .page-hero::before {
   content: '';
@@ -159,8 +358,10 @@ header {
   padding: 2.5rem 2rem;
   margin-bottom: 2.5rem;
   transition: box-shadow 0.3s, transform 0.3s;
-  border: 1.5px solid #FFD70022;
+  border: 2.5px solid #FFD700;
+  border-image: var(--medieval-border) 8 repeat;
   backdrop-filter: blur(2px) saturate(1.1);
+  font-family: var(--medieval-font);
 }
 .game-details:hover, .card:hover, .content-section:hover {
   box-shadow: 0 8px 32px 4px #FFD70033, 0 4px 32px rgba(255,215,0,0.18);
@@ -204,13 +405,15 @@ header {
 }
 
 .call-to-action {
-  background: rgba(255,215,0,0.13);
+  background: rgba(255,215,0,0.15);
   border-radius: 1.5rem;
   box-shadow: 0 4px 24px 0 #FFD70022, 0 2px 12px rgba(255,215,0,0.10);
   padding: 2.5rem 1.5rem;
   margin-bottom: 2.5rem;
-  border: 1.5px solid #FFD70022;
+  border: 2.5px solid #FFD700;
+  border-image: var(--medieval-border) 8 repeat;
   backdrop-filter: blur(1.5px) saturate(1.1);
+  font-family: var(--medieval-font);
 }
 
 footer {
@@ -219,10 +422,12 @@ footer {
   text-align: center;
   padding: 1.5rem 0 1rem 0;
   margin-top: 2.5rem;
-  border-top: 2.5px solid #FFD700;
+  border-top: 6px solid #FFD700;
+  border-image: var(--medieval-border) 8 repeat;
   border-radius: 1.5rem 1.5rem 0 0;
   box-shadow: 0 -4px 32px 0 #FFD70022, 0 -2px 12px rgba(255,215,0,0.10);
-  font-size: 1.1rem;
+  font-size: 1.18rem;
+  font-family: var(--medieval-font);
 }
 
 a, .fancy-link {
@@ -285,15 +490,25 @@ section {
   border-radius: 1.5rem;
   box-shadow: 0 2px 16px 0 #FFD70011;
   padding-bottom: 0.5rem;
+  border: 2.5px solid #FFD700;
+  border-image: var(--medieval-border) 8 repeat;
+  font-family: var(--medieval-font);
 }
 
 @media (max-width: 768px) {
   .page-hero {
     padding: 1.5rem 0.5rem;
   }
-  nav ul {
-    flex-direction: column;
+  .nav {
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 0.25rem;
+  }
+  .nav-link {
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+    font-size: 1rem;
   }
   .game-details, .card, .content-section {
     padding: 1rem 0.5rem;
