@@ -784,6 +784,9 @@ section {
 
 /* Adjust copyright alignment */
 footer {
+  margin-left: 270px;
+  width: 90%;
+  max-width: 950px;
   text-align: center;
   padding: 20px;
   background: var(--parchment-medium);
