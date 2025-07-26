@@ -5,51 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="War in Tales of the Seven Seas - Strategies and battles for dominance.">
   <title>War - Tales of the Seven Seas</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/custom.css">
 </head>
 <body>
   <!-- Mobile navigation toggle -->
-  <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
-  
-  <!-- Mobile navigation overlay -->
+  <button class="nav-toggle btn btn-outline-primary d-md-none mb-2" aria-label="Toggle navigation">☰</button>
   <div class="nav-overlay"></div>
-
-  <header>
-    <h1>
-      <img src="assets/images/logo.jpg" alt="Tales of the Seven Seas Logo" class="header-logo">
-      Tales of the Seven Seas
-    </h1>
+  <header class="container py-3 d-flex align-items-center">
+    <img src="assets/images/logo.jpg" alt="Tales of the Seven Seas Logo" class="header-logo me-3">
+    <h1 class="m-0">Tales of the Seven Seas</h1>
   </header>
-
-  <nav aria-label="Main navigation">
-    <ul>
-      <li><a href="index.html">🏰 Home</a></li>
-      <li><a href="spawning.html">⚔️ Spawning</a></li>
-      <li><a href="basic-mechanics.html">⚙️ Mechanics</a></li>
-      <li><a href="nation-types.html">👑 Nation Types</a></li>
-      <li><a href="migration.html">🏃‍♂️ Migration</a></li>
-      <li><a href="map.html">🗺️ Map & Visibility</a></li>
-      <li><a href="terrain.html">🏔️ Terrain</a></li>
-      <li><a href="exploration.html">🚢 Exploration</a></li>
-      <li><a href="worldbuilding.html">📜 Worldbuilding</a></li>
-      <li><a href="land-resources.html">🌾 Land & Resources</a></li>
-      <li><a href="culture-technology.html">🔬 Culture & Tech</a></li>
-      <li><a href="war.html" class="active">⚔️ War</a></li>
-      <li><a href="treaties.html">🤝 Treaties</a></li>
+  <nav aria-label="Main navigation" class="bg-dark">
+    <ul class="nav justify-content-center py-2 flex-wrap">
+      <li class="nav-item"><a href="index.html" class="nav-link text-primary">🏰 Home</a></li>
+      <li class="nav-item"><a href="spawning.html" class="nav-link text-primary">⚔️ Spawning</a></li>
+      <li class="nav-item"><a href="basic-mechanics.html" class="nav-link text-primary">⚙️ Mechanics</a></li>
+      <li class="nav-item"><a href="nation-types.html" class="nav-link text-primary">👑 Nation Types</a></li>
+      <li class="nav-item"><a href="migration.html" class="nav-link text-primary">🏃‍♂️ Migration</a></li>
+      <li class="nav-item"><a href="map.html" class="nav-link text-primary">🗺️ Map & Visibility</a></li>
+      <li class="nav-item"><a href="terrain.html" class="nav-link text-primary">🏔️ Terrain</a></li>
+      <li class="nav-item"><a href="exploration.html" class="nav-link text-primary">🚢 Exploration</a></li>
+      <li class="nav-item"><a href="worldbuilding.html" class="nav-link text-primary">📜 Worldbuilding</a></li>
+      <li class="nav-item"><a href="land-resources.html" class="nav-link text-primary">🌾 Land & Resources</a></li>
+      <li class="nav-item"><a href="culture-technology.html" class="nav-link text-primary">🔬 Culture & Tech</a></li>
+      <li class="nav-item"><a href="war.html" class="nav-link active text-warning fw-bold">⚔️ War</a></li>
+      <li class="nav-item"><a href="treaties.html" class="nav-link text-primary">🤝 Treaties</a></li>
     </ul>
   </nav>
 
-  <main>
-    <section class="page-hero">
-      <h2>War</h2>
-      <p>Master strategies and lead your nation to victory in Tales of the Seven Seas.</p>
+  <main class="container my-4">
+    <section class="page-hero mb-4">
+      <h2 class="display-4 fw-bold">War</h2>
+      <p class="lead">Master strategies and lead your nation to victory in Tales of the Seven Seas.</p>
     </section>
-
-    <section class="game-details">
-      <h3>Revised War System</h3>
-      <h4>Casus Belli</h4>
-      <ul>
-        <li><strong>Skirmish:</strong>
+    <section class="game-details mb-5">
+      <h3 class="fw-bold text-primary">Revised War System</h3>
+      <h4 class="mt-4">Casus Belli</h4>
+      <ul class="list-group list-group-flush mb-4">
+        <li class="list-group-item bg-transparent border-0"><strong>Skirmish:</strong>
           <ul>
             <li>Declaration: Declare 1-20 tiles to capture.</li>
             <li>Victory Requirement: Hold &gt;50% of declared tiles by end of Turn 4 OR opponent surrenders.</li>
@@ -57,7 +52,7 @@
             <li>Defeat: Opponent may demand 50% of undeclared tiles they hold.</li>
           </ul>
         </li>
-        <li><strong>Conquest:</strong>
+        <li class="list-group-item bg-transparent border-0"><strong>Conquest:</strong>
           <ul>
             <li>Declaration: Declare 1-3 settlements to capture (no capitals unless only city).</li>
             <li>Victory Requirement: Capture settlements within 6 turns.</li>
@@ -65,7 +60,7 @@
             <li>Defeat: Lose settlements + opponent may relocate orphaned tiles.</li>
           </ul>
         </li>
-        <li><strong>Raid:</strong>
+        <li class="list-group-item bg-transparent border-0"><strong>Raid:</strong>
           <ul>
             <li>Declaration: Declare loot target (1-15).</li>
             <li>Victory Requirement: Generate loot through battles/sieges within 4 turns.</li>
@@ -73,7 +68,7 @@
             <li>Defeat: Pay opponent 1/2 declared loot value.</li>
           </ul>
         </li>
-        <li><strong>Subjugation:</strong>
+        <li class="list-group-item bg-transparent border-0"><strong>Subjugation:</strong>
           <ul>
             <li>Declaration: State conditions (vassalization, cultural change, etc.).</li>
             <li>Victory Requirement: Capture capital OR hold 50% settlements for 2 turns.</li>
@@ -82,79 +77,79 @@
           </ul>
         </li>
       </ul>
-
-      <h4>Army System</h4>
-      <ul>
-        <li><strong>Creation Cost:</strong> 1 Labor (halts regeneration only during active battle turns).</li>
-        <li><strong>Maintenance:</strong> After Turn 3, costs 1 Food/army/turn.</li>
-        <li><strong>Settlement Limits:</strong>
+      <h4 class="mt-4">Army System</h4>
+      <ul class="list-group list-group-flush mb-4">
+        <li class="list-group-item bg-transparent border-0"><strong>Creation Cost:</strong> 1 Labor (halts regeneration only during active battle turns).</li>
+        <li class="list-group-item bg-transparent border-0"><strong>Maintenance:</strong> After Turn 3, costs 1 Food/army/turn.</li>
+        <li class="list-group-item bg-transparent border-0"><strong>Settlement Limits:</strong>
           <ul>
             <li>Town: 1 army.</li>
             <li>City: 3 armies.</li>
             <li>Metropolis: 5 armies.</li>
           </ul>
         </li>
-        <li><strong>Unit Costs (Pre-war purchases only):</strong>
-          <table>
-            <thead>
-              <tr>
-                <th>Unit</th>
-                <th>Cost</th>
-                <th>Stats (Atk/Def/Move)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Infantry</td>
-                <td>Base</td>
-                <td>1/-/1</td>
-              </tr>
-              <tr>
-                <td>Shock</td>
-                <td>1 Bronze</td>
-                <td>1/Immune*/1</td>
-              </tr>
-              <tr>
-                <td>Archer</td>
-                <td>1 Timber</td>
-                <td>1/-/1 (Range 2)</td>
-              </tr>
-              <tr>
-                <td>Cavalry</td>
-                <td>1 Mount</td>
-                <td>1/-/3</td>
-              </tr>
-              <tr>
-                <td>Light Chariot</td>
-                <td>1 Mount</td>
-                <td>1/Immune**/3</td>
-              </tr>
-              <tr>
-                <td>Heavy Chariot</td>
-                <td>1 Mount</td>
-                <td>1/Immune***/2</td>
-              </tr>
-              <tr>
-                <td>Commander</td>
-                <td>Auto-incl</td>
-                <td>1/Immune****/1</td>
-              </tr>
-            </tbody>
-          </table>
+        <li class="list-group-item bg-transparent border-0"><strong>Unit Costs (Pre-war purchases only):</strong>
+          <div class="table-responsive">
+            <table class="table table-bordered table-striped align-middle mt-2">
+              <thead class="table-dark">
+                <tr>
+                  <th>Unit</th>
+                  <th>Cost</th>
+                  <th>Stats (Atk/Def/Move)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Infantry</td>
+                  <td>Base</td>
+                  <td>1/-/1</td>
+                </tr>
+                <tr>
+                  <td>Shock</td>
+                  <td>1 Bronze</td>
+                  <td>1/Immune*/1</td>
+                </tr>
+                <tr>
+                  <td>Archer</td>
+                  <td>1 Timber</td>
+                  <td>1/-/1 (Range 2)</td>
+                </tr>
+                <tr>
+                  <td>Cavalry</td>
+                  <td>1 Mount</td>
+                  <td>1/-/3</td>
+                </tr>
+                <tr>
+                  <td>Light Chariot</td>
+                  <td>1 Mount</td>
+                  <td>1/Immune**/3</td>
+                </tr>
+                <tr>
+                  <td>Heavy Chariot</td>
+                  <td>1 Mount</td>
+                  <td>1/Immune***/2</td>
+                </tr>
+                <tr>
+                  <td>Commander</td>
+                  <td>Auto-incl</td>
+                  <td>1/Immune****/1</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </li>
       </ul>
-
-      <h4>New Mechanics</h4>
-      <ul>
-        <li><strong>Supply Lines:</strong> Armies beyond expansion range 2+ turns lose 1 random unit/turn.</li>
-        <li><strong>War Weariness:</strong>
+      <h4 class="mt-4">New Mechanics</h4>
+      <ul class="list-group list-group-flush mb-4">
+        <li class="list-group-item bg-transparent border-0"><strong>Supply Lines:</strong> Armies beyond expansion range 2+ turns lose 1 random unit/turn.</li>
+        <li class="list-group-item bg-transparent border-0"><strong>War Weariness:</strong>
           <ul>
             <li>After Turn 4: +1 Food maintenance/army/turn.</li>
             <li>After Turn 6: -1 Combat Strength to all units.</li>
           </ul>
         </li>
-        <li><strong>Diplomatic Penalties:</strong> Aggressor loses 1 Diplomatic Favor per war declaration.</li>
-        <li><strong>Scouting:</strong> 1 free Scout unit per army:
+        <li class="list-group-item bg-transparent border-0"><strong>Diplomatic Penalties:</strong> Aggressor loses 1 Diplomatic Favor per war declaration.</li>
+        <li class="list-group-item bg-transparent border-0"><strong>Scouting:</strong> 1 free Scout unit per army:
           <ul>
             <li>Movement: 5 tiles.</li>
             <li>Reveals enemy positions in adjacent tiles.</li>
@@ -163,55 +158,21 @@
         </li>
       </ul>
     </section>
-
-
-
-    <section class="call-to-action">
-      <h3>Ready for Battle?</h3>
+    <section class="call-to-action text-center mb-5">
+      <h3 class="fw-bold">Ready for Battle?</h3>
       <p>Prepare your nation for war and lead them to glory in Tales of the Seven Seas.</p>
-      <div class="cta-buttons">
-        <a href="spawning.html" class="cta-primary">⚔️ Start Spawning</a>
-        <a href="index.html" class="cta-secondary">🏰 Back to Home</a>
+      <div class="cta-buttons d-flex justify-content-center gap-3 mt-3">
+        <a href="spawning.html" class="btn cta-primary btn-lg shadow">⚔️ Start Spawning</a>
+        <a href="index.html" class="btn cta-secondary btn-lg">🏰 Back to Home</a>
       </div>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Tales of the Seven Seas. All rights reserved.</p>
+  <footer class="footer mt-auto py-3">
+    <p class="mb-0">&copy; 2025 Tales of the Seven Seas. All rights reserved.</p>
   </footer>
 
   <script src="assets/js/main.js"></script>
-
-  <style>
-    .fancy-link {
-      color: var(--illuminated-blue);
-      font-weight: bold;
-      text-decoration: none;
-      position: relative;
-      transition: all 0.3s ease;
-    }
-
-    .fancy-link::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: -2px;
-      width: 100%;
-      height: 2px;
-      background: var(--gold-accent);
-      transform: scaleX(0);
-      transform-origin: right;
-      transition: transform 0.3s ease;
-    }
-
-    .fancy-link:hover {
-      color: var(--illuminated-red);
-    }
-
-    .fancy-link:hover::after {
-      transform: scaleX(1);
-      transform-origin: left;
-    }
-  </style>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoA6DQD1p1UjE5e2Q4hQpztNJqQF0h+K6DZH81+8x1L4F+Q" crossorigin="anonymous"></script>
 </body>
 </html>
