@@ -1,58 +1,58 @@
 /* Custom Bootstrap overrides for Tales of the Seven Seas */
-/* Gold theme and visual enhancements */
+/* Medieval earth-tone theme with historically accurate pigments */
 :root {
   --wax-seal: url('https://upload.wikimedia.org/wikipedia/commons/6/6b/Wax-seal.png');
   --sparkle: url('https://www.transparenttextures.com/patterns/stardust.png');
   --heading-font: 'UnifrakturCook', 'Cinzel Decorative', serif;
-  --heading-shadow: 0 2px 12px #7c2f1ecc, 0 1px 0 #f3e9d2, 0 0px 2px #0008;
-  --heading-underline: linear-gradient(90deg, #7c2f1e 60%, #3a5ca8 100%);
+  --heading-shadow: 0 2px 8px #4a3425aa, 0 1px 0 #e8dcc0, 0 0px 2px #0006;
+  --heading-underline: linear-gradient(90deg, #8b4513 60%, #5d4037 100%);
   --medieval-font: 'UnifrakturCook', 'Cinzel Decorative', 'IM Fell English SC', serif;
   --parchment-bg: url('https://www.transparenttextures.com/patterns/old-mathematics.png');
-  --medieval-border: repeating-linear-gradient(90deg, #7c2f1e, #3a5ca8 4px, transparent 4px, transparent 8px);
-  --bs-primary: #7c2f1e; /* Deep red ochre */
-  --bs-secondary: #3a5ca8; /* Lapis blue */
-  --bs-accent: #4b6b43; /* Verdigris green */
-  --bs-body-bg: #f3e9d2; /* Parchment */
-  --bs-body-color: #2d1c0b; /* Dark brown ink */
-  --bs-link-color: #3a5ca8;
-  --bs-link-hover-color: #bfa14a;
-  --gold-gradient: linear-gradient(120deg, #bfa14a 0%, #f3e9d2 100%);
-  --gold-gradient-animated: linear-gradient(270deg, #bfa14a, #f3e9d2, #7c2f1e, #3a5ca8, #bfa14a);
+  --medieval-border: repeating-linear-gradient(90deg, #8b4513, #5d4037 4px, transparent 4px, transparent 8px);
+  --bs-primary: #8b4513; /* Saddle brown - earth pigment */
+  --bs-secondary: #5d4037; /* Deep brown - umber */
+  --bs-accent: #6b5b47; /* Taupe - natural clay */
+  --bs-body-bg: #f5f1e8; /* Aged parchment */
+  --bs-body-color: #3e2723; /* Dark walnut ink */
+  --bs-link-color: #5d4037;
+  --bs-link-hover-color: #8d6e63;
+  --gold-gradient: linear-gradient(120deg, #a0825c 0%, #e8dcc0 100%);
+  --gold-gradient-animated: linear-gradient(270deg, #a0825c, #e8dcc0, #8b4513, #5d4037, #a0825c);
 }
 
 body {
 /* Illuminated paragraph initials - improved placement */
 p::first-letter {
   font-size: 1.7em;
-  color: #bfa14a;
+  color: #8d6e63;
   font-family: 'IM Fell English SC', serif;
-  background: linear-gradient(120deg, #bfa14a 60%, #f3e9d2 100%);
+  background: linear-gradient(120deg, #8d6e63 60%, #e8dcc0 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 0 0 8px #bfa14a99, 0 1px 0 #f3e9d2;
+  text-shadow: 0 0 6px #8d6e6399, 0 1px 0 #e8dcc0;
   margin-right: 0.12em;
   display: inline-block;
   vertical-align: baseline;
   line-height: 1;
-  filter: drop-shadow(0 0 4px #bfa14a88);
+  filter: drop-shadow(0 0 3px #8d6e6388);
 }
 
 /* Dropcap utility class for manual control */
 .dropcap {
   font-size: 2.2em;
-  color: #bfa14a;
+  color: #8d6e63;
   font-family: 'Cinzel Decorative', serif;
-  background: linear-gradient(120deg, #bfa14a 60%, #f3e9d2 100%);
+  background: linear-gradient(120deg, #8d6e63 60%, #e8dcc0 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 0 0 12px #bfa14acc, 0 2px 8px #f3e9d2, 0 0 2px #0008;
+  text-shadow: 0 0 8px #8d6e63aa, 0 2px 6px #e8dcc0, 0 0 2px #0006;
   display: inline-block;
   vertical-align: baseline;
   line-height: 1;
   margin-right: 0.12em;
-  filter: drop-shadow(0 0 6px #bfa14a88);
+  filter: drop-shadow(0 0 4px #8d6e6388);
 }
 
 /* Scroll effect for sections */
