@@ -1,0 +1,26 @@
+/* Base styles to complement the medieval theme in custom.css */
+:root {
+  color-scheme: light;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+/* Ensure Bootstrap variables integrate with our palette when used */
+.btn-primary,
+.bg-primary { background-color: #704214 !important; }
+.text-primary { color: #704214 !important; }
+.bg-dark { background-color: rgba(45,24,16,0.95) !important; }
+.text-warning { color: #d4c4a8 !important; }
+
+/* Utility spacing tweaks that won't fight Bootstrap */
+.container { max-width: 1140px; }
+
+/* Cards parity when Bootstrap card is used without extra class */
+.card { border: none; }
+.card-body { padding: 1rem 1rem; }
