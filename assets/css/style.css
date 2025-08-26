@@ -15,6 +15,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
   border: 3px solid #8b4513; /* SaddleBrown border */
   border-radius: 50%;
 }
@@ -29,15 +32,32 @@ nav.bg-dark {
   border-bottom: 2px solid #8d6e63;
 }
 
+nav.bg-dark .nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav.bg-dark .nav-item {
+  margin: 0 0.5rem;
+}
+
 .nav-link {
-  color: #d7ccc8 !important; /* A light, parchment-like color for nav links */
+  color: #d7ccc8 !important;
   font-family: 'MedievalSharp', cursive;
   font-size: 1.2rem;
+  transition: color 0.3s ease-in-out;
 }
 
 .nav-link.active, .nav-link:hover {
-  color: #ffab40 !important; /* A golden color for active/hover links */
-  text-shadow: 1px 1px 2px #000;
+  color: #ffab40 !important;
+  background-color: rgba(255, 171, 64, 0.1);
+  border-radius: 4px;
 }
 
 main {
@@ -67,8 +87,10 @@ main {
 .dropcap {
   font-size: 4em;
   float: left;
-  line-height: 0.8;
+  line-height: 1;
   margin-right: 0.1em;
+  margin-top: 0;
+  padding-top: 0;
 }
 
 .card.feature-card {
