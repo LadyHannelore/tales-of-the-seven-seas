@@ -101,7 +101,21 @@ main {
 
 .feature-card .card-img-top {
   height: 200px;
+  width: 100%;
   object-fit: cover;
+  object-position: center;
+}
+
+/* General responsive image styling */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Ensure images in content areas are responsive */
+.game-introduction img {
+  max-width: 100%;
+  height: auto;
 }
 
 .card-title {
