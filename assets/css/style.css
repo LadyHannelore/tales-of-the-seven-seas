@@ -1,26 +1,96 @@
-/* Base styles to complement the medieval theme in custom.css */
-:root {
-  color-scheme: light;
-}
-
-html, body {
-  height: 100%;
-}
+/* Medieval Theme for Tales of the Seven Seas */
 
 body {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  background-color: #f5deb3; /* A parchment-like color */
+  color: #5b4636; /* Dark, rustic brown for text */
   margin: 0;
+  padding: 0;
+  background-image: url('../images/parchment-texture.png'); /* Optional: a parchment texture */
 }
 
-/* Ensure Bootstrap variables integrate with our palette when used */
-.btn-primary,
-.bg-primary { background-color: #704214 !important; }
-.text-primary { color: #704214 !important; }
-.bg-dark { background-color: rgba(45,24,16,0.95) !important; }
-.text-warning { color: #d4c4a8 !important; }
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'MedievalSharp', cursive;
+  color: #4a2c2a; /* A darker, richer brown for headings */
+}
 
-/* Utility spacing tweaks that won't fight Bootstrap */
-.container { max-width: 1140px; }
+.header-logo {
+  border: 3px solid #8b4513; /* SaddleBrown border */
+  border-radius: 50%;
+}
 
-/* Cards parity when Bootstrap card is used without extra class */
-.card { border: none; }
-.card-body { padding: 1rem 1rem; }
+header h1 {
+    font-size: 3rem;
+}
+
+nav.bg-dark {
+  background-color: #3e2723 !important; /* A very dark brown, like old wood */
+  border-top: 2px solid #8d6e63;
+  border-bottom: 2px solid #8d6e63;
+}
+
+.nav-link {
+  color: #d7ccc8 !important; /* A light, parchment-like color for nav links */
+  font-family: 'MedievalSharp', cursive;
+  font-size: 1.2rem;
+}
+
+.nav-link.active, .nav-link:hover {
+  color: #ffab40 !important; /* A golden color for active/hover links */
+  text-shadow: 1px 1px 2px #000;
+}
+
+main {
+  padding: 20px;
+  background: rgba(245, 222, 179, 0.8); /* Semi-transparent parchment */
+  border-left: 2px solid #8d6e63;
+  border-right: 2px solid #8d6e63;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-hero {
+  text-align: center;
+  padding: 40px 20px;
+  background: url('../images/old-map-bg.jpg') no-repeat center center;
+  background-size: cover;
+  color: #fff;
+  text-shadow: 2px 2px 4px #000;
+  border-bottom: 5px solid #4a2c2a;
+}
+
+.page-hero h2 {
+    font-size: 4rem;
+    color: #fff;
+}
+
+.dropcap {
+  font-size: 4em;
+  float: left;
+  line-height: 0.8;
+  margin-right: 0.1em;
+}
+
+.card.feature-card {
+    background-color: #efebe9;
+    border: 2px solid #a1887f;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+}
+
+.feature-card .card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-title {
+    color: #5d4037;
+}
+
+footer {
+  background-color: #3e2723;
+  color: #d7ccc8;
+  text-align: center;
+  padding: 20px;
+  border-top: 2px solid #8d6e63;
+  margin-top: 20px;
+}
